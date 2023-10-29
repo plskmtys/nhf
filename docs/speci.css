@@ -1,0 +1,55 @@
+html{
+    background-color: white;
+    color: black;
+    line-height: 1.25;
+    font-family: Arial;
+}
+
+.content-width{
+    max-width: 92%;
+    width: calc(100% - 2rem);
+    margin: 0 auto;
+}
+
+ol{
+    list-style: none;
+    counter-reset: num;
+}
+
+ol li{
+    counter-increment: num;
+}
+
+ol li::before{
+    content: "(" counter(num) ") ";
+}
+
+h1{
+    text-align: left;
+}
+
+h2{
+    text-align: left;
+}
+
+div{
+    text-align: left;
+}
+
+.code{
+    font-family: Monospace;
+    color: #00a90a;
+}
+
+.grid-container{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.nev{
+    text-align: right;
+    margin: auto 0;
+}

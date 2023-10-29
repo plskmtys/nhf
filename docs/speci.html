@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>telefonkönyv</title>
+    <link rel="stylesheet" href="speci.css" type="text/css">
+</head>
+<body class="content-width">
+    <div class="grid-container">
+        <h1>Telefonkönyv</h1>
+        <div class="nev">Név: Paluska Mátyás<br>Neptun: EM0G6P</div>
+    </div>
+    <div>
+        <h2>A program célja</h2>
+        <p>
+            A program kontaktok kezelését hajtja végre. A program képes importálni és exportálni .vcard formátumú fájlokat.
+            A programban a tárolt kontaktok megtekinthetők, szerkeszthetők, és törölhetők.
+        </p>
+        <h2>A program használata</h2>
+        <p>
+            A menüvezérelt programot a felhasználó konzolablakon keresztül kezelheti. Az éppen aktív menü opcióit az annak megfelelő szám bevitelével lehet kiválasztani.
+            Ezután megjelenik annak tartalma, vagy ha az is egy menü, akkor annak opciói, amik közül szintén ugyanígy lehet választani.
+        </p>
+        <p>A menü felépítése:</p>
+            <ol>
+                <li>új felvétele <ol>
+                    <li>név</li>
+                    <li>telefonszám</li>
+                    <li>email</li>
+                    <li>cím</li>
+                    <li>foglalkozás</li>
+                </ol></li>
+                <li>összes megtekintése<ol>
+                    <li>kontakt #1<ol>
+                        <li>szerkesztés<ol>
+                            (ezt kiválasztva ugyanolyan menüt kapunk, mint amikor újat veszünk fel.)
+                        </ol></li>
+                        <li>exportálás<ul class="code">/*input: elérési út/fáljnév.vcard/*</ul></li>
+                    </ol></li>
+                    <li>kontakt #2 <ol>...</ol></li>
+                    <li>kontakt #3</li>
+                    ...
+                </ol></li>
+                <li>keresés<ul>keresett kifejezés: <span class="code">/*input*/</span></ul></li>
+                <li>összes exportálása<ol>fájlnév: <span class="code">/*input*/</span></ol></li>
+                <li>importálás<ul class="code">/*input: elérési út/fáljnév.vcard/*</ul></li>
+            </ol>
+        <h2>A felhasználóval történő egyéb kommunikáció</h2>
+        <p>
+            A hibaüzeneteket a konzolra írja ki a program. <br>
+            Amennyiben a hiba a felhasználó hibás inputjából adódik, a program új bemenetet kér. <br>
+            Futásidejű probléma esetén a program tájékoztatja erről a felhasználót, majd kilép.
+        </p>
+    </div>
+</body>
+</html>
