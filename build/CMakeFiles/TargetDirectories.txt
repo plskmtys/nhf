@@ -1,0 +1,3 @@
+S:/code/prog1/nhf/nhf/build/CMakeFiles/nhf.dir
+S:/code/prog1/nhf/nhf/build/CMakeFiles/edit_cache.dir
+S:/code/prog1/nhf/nhf/build/CMakeFiles/rebuild_cache.dir

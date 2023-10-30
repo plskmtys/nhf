@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Firstname Lastname
+N:Lastname;Firstname;Middlename;Dr.;PhD.
+ADR;TYPE=home:;;123 Main St.;Springfield;IL;12345;USA
+BDAY:--0203
+EMAIL:simon.perreault@viagenie.ca
+END:VCARD
