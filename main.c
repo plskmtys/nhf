@@ -2,13 +2,17 @@
 #include <stdlib.h>
 #include "include/debugmalloc.h"
 #include "include/vcard.h"
+#include <stdio.h>
+#ifdef _WIN32
+    #include <windows.h>
+#endif
+#include "include/menu.h"
 
 int main(){
-    printf("hello\n");
-    fullname belanev;
-    belanev.first="Béla";
-    belanev.last="Lugosi";
-    belanev.prefix="Mr.";
-    contact lugosi_bela;
-    lugosi_bela.name=belanev;
+    #ifdef _WIN32
+        SetConsoleCP(1250);
+        SetConsoleOutputCP(1250);
+    #endif
+    int val=fomenu();
+    printf("valasztas: %d", val);
 }
