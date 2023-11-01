@@ -13,6 +13,14 @@ int main(){
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
     #endif
-    int val=fomenu();
-    printf("valasztas: %d", val);
+    int next=menukiir(main_options);
+    printf("valasztas: %d\n", next);
+    switch(next){
+        case(1):
+            next = menukiir(newc_options);
+        case(2):
+            next = menukiir(view_options);
+        default:
+            next = menukiir(main_options);
+    }
 }
