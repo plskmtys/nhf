@@ -13,34 +13,82 @@ int main(){
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
     #endif
-    int next=menukiir(main_options);
-    printf("valasztas: %d\n", next);
+
+    //főmenü kiírása
+    char next=menukiir(main_options);
+    //printf("valasztas: %c\n", next);
     switch(next){
-        case(1):
+
+        //új
+        case('1'):
             contact uj;
             InitContact(uj);
             next = menukiir(newc_options);
             switch (next)
             {
-            case 1:
-                uj.fn = beker(newc_options[1]);
-                break;
-            
-            default:
-                break;
+                //név
+                case '1':
+                    uj.fn = beker(newc_options[0]);
+                    break;
+                
+                //tel
+                case '2':
+                    uj.phone = beker(newc_options[1]);
+                    break;
+                
+                //email
+                case '3':
+                    uj.email = beker(newc_options[2]);
+                    break;
+                
+                //address
+                case '4':
+                    uj.address1 = StrToAddr(beker(newc_options[3]));
+                    break;
+                
+                //bday
+                case '5':
+                    uj.bday = StrToDate(beker(newc_options[4]));
+                    break;
+                
+                //org
+                case '6':
+                    uj.org = beker(newc_options[5]);
+                    break;
+                
+                //title
+                case '7':
+                    uj.title = beker(newc_options[6]);
+                    break;
+                
+                //note
+                case '8':
+                    uj.note = beker(newc_options[7]);
+                    break;
+                
+                //save
+                case 's':
+                    /*code for save action*/
+                default:
+                    break;
             }
+            break;
 
-        case(2):
+        //view all
+        case('2'):
             next = menukiir(view_options);
-
-        case 3:
-            /*search*/
+        
+        //search
+        case '3':
+            /*code for search*/
             break;
-
-        case 4: 
-            /*export*/
+        
+        //export
+        case '4':
+            /*code for export*/
             break;
+        
         default:
-            next = menukiir(main_options);
+            break;
     }
 }

@@ -1,7 +1,7 @@
 BEGIN:VCARD
 VERSION:4.0
 FN:Firstname Lastname
-N:Lastname;Firstname;Middlename;Dr.;PhD.
+N:Lastname;Firstname;Middlename,Middlename2,MiddlenameN;Dr.;PhD.
 TEL:+36303607695
 ADR;TYPE=home:;;47 Irinyi József u.;Budapest;Pest;1117;Hungary
 BDAY:--0919

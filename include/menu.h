@@ -1,7 +1,5 @@
-//
-// Created by Matyi on 2023. 10. 31..
-//
 #include <stdio.h>
+#include <stdlib.h>
 #include "debugmalloc.h"
 #ifndef NHF_MENU_H
 #define NHF_MENU_H
@@ -48,6 +46,7 @@ const char *view_options[] = {
     NULL
 };
 
+//UNUSED
 int fomenu(){
     printf("telefonkönyv\nFŐMENÜ\n");
     for(int i=0; i<4; i++) printf("(%d) %s\n", i+1, main_options[i]);
@@ -56,12 +55,13 @@ int fomenu(){
     scanf(" %d", &choice);
     return choice;
 }
+//END_UNUSED
 
-int menukiir(const char **lista){
-    int choice=0;
+char menukiir(const char **lista){
+    char choice;
     for(int i=0; lista[i] != NULL; i++) printf("(%d) %s\n", i+1, lista[i]);
     printf("\n");
-    scanf(" %d", &choice);
+    scanf(" %c", &choice);
     return choice;
 }
 

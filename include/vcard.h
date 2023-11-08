@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 
 #ifndef VCARD_H
@@ -32,28 +33,32 @@ typedef struct contact{
     char *title;
 }contact;
 
-fullname StrToName(char *instr){
-    fullname ret;
-    if(sscanf(instr, "%s %s %s %s %s") == 5)
-        sscanf(instr, "%s %s %s %s %s", ret.prefix, ret.first, ret.middle, ret.last, ret.suffix);
-    else if(sscanf(instr, "%s %s %s %s")==4){
-        sscanf(instr, "%s %s %s %s", ret.prefix, ret.first, ret.last, ret.suffix);
-    }
+address StrToAddr(char *instr){
+    address ret;
     return ret;
 }
 
-address StrToAddr(){
-    address ret;
-    return ret;
+char *StrToDate(char *instr){
+    char *out = "------";
+    return out;
+}
+
+fullname InitName(fullname empty){
+    empty.first = "";
+    empty.last="";
+    empty.middle="";
+    empty.prefix="";
+    empty.suffix="";
 }
 
 contact InitContact(contact empty){
     empty.phone="";
     empty.fn="";
-    empty.name=StrToName("");
+    fullname defaultname;
+    empty.name=InitName(defaultname);
     empty.email="";
     empty.address1=StrToAddr("");
-    empty.bday="------";
+    empty.bday="";
     empty.org="";
     empty.title="";
     empty.note="";
@@ -67,9 +72,10 @@ void writecard(char *filename, contact out){
     fprintf(fp, "N:%s;%s;%s;%s;%s\n", out.name.last, out.name.first, out.name.middle, out.name.prefix, out.name.suffix);
     fprintf(fp, "TEL:%s\n", out.phone);
     fprintf(fp, "ADDR;TYPE=home:;;%s;%s;%s;%d;%s\n", out.address1.street_no, out.address1.city, out.address1.county, out.address1.zip, out.address1.country);
-    fprintf(fp, "BDAY:%s",out.bday);
-    fprintf(fp, "EMAIL:%s", out.email);
+    fprintf(fp, "BDAY:%s\n",out.bday);
+    fprintf(fp, "EMAIL:%s\n", out.email);
+    fprintf(fp, "NOTE:%s\n", out.note);
     fprintf(fp, "END:VCARD");
 }
 
-#endif
+#endif //VCARD_H
