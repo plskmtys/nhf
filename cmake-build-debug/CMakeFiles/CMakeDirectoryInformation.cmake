@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

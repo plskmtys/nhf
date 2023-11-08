@@ -2,7 +2,8 @@ BEGIN:VCARD
 VERSION:4.0
 FN:Firstname Lastname
 N:Lastname;Firstname;Middlename;Dr.;PhD.
-ADR;TYPE=home:;;123 Main St.;Springfield;IL;12345;USA
-BDAY:--0203
-EMAIL:simon.perreault@viagenie.ca
+TEL:+36303607695
+ADR;TYPE=home:;;47 Irinyi József u.;Budapest;Pest;1117;Hungary
+BDAY:--0919
+EMAIL:plskmtys@sch.bme.hu
 END:VCARD

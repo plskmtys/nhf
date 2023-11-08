@@ -17,9 +17,29 @@ int main(){
     printf("valasztas: %d\n", next);
     switch(next){
         case(1):
+            contact uj;
+            InitContact(uj);
             next = menukiir(newc_options);
+            switch (next)
+            {
+            case 1:
+                uj.fn = beker(newc_options[1]);
+                break;
+            
+            default:
+                break;
+            }
+
         case(2):
             next = menukiir(view_options);
+
+        case 3:
+            /*search*/
+            break;
+
+        case 4: 
+            /*export*/
+            break;
         default:
             next = menukiir(main_options);
     }

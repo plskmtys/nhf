@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build
+CMAKE_BINARY_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/CMakeFiles /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

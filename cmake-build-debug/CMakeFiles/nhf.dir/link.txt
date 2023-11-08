@@ -1,0 +1,1 @@
+/bin/gcc -g CMakeFiles/nhf.dir/main.c.o -o nhf 

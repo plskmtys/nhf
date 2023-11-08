@@ -6,24 +6,6 @@
 #ifndef NHF_MENU_H
 #define NHF_MENU_H
 
-typedef enum mainmenu {
-    newc = 0,
-    browse = 1,
-    search = 2,
-    exportall = 3
-}mainmenu;
-
-typedef enum newcon{
-    name = 0,
-    num = 1,
-    mail = 2,
-    addr = 3,
-    bday = 4,
-    note = 5,
-    org = 6,
-    title = 7
-}newcon;
-
 const char *main_options[] = {
     "új kontakt",
     "kontaktok megtekintése",
@@ -41,6 +23,21 @@ const char *newc_options[] = {
     "cég",
     "foglalkozás",
     "megjegyzés",
+    NULL
+};
+
+const char *name_options[] = {
+    "név előtag",
+    "keresztnév",
+    "második név",
+    "vezetéknév",
+    "név utótag",
+    NULL
+};
+
+const char *org_options[] = {
+    "szervezet",
+    "beosztás",
     NULL
 };
 
@@ -66,6 +63,13 @@ int menukiir(const char **lista){
     printf("\n");
     scanf(" %d", &choice);
     return choice;
+}
+
+char *beker(const char *prompt){
+    char *ans = "";
+    printf("\n%s ", prompt);
+    scanf(" %s", ans);
+    return ans;
 }
 
 #endif //NHF_MENU_H

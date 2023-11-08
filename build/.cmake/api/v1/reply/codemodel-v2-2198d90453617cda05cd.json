@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.26"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "nhf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-nhf-Debug-9a3c6daa048c8a11c2ee.json",
+					"jsonFile" : "target-nhf-Debug-2b468efbeda662f8d7aa.json",
 					"name" : "nhf",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "S:/code/prog1/nhf/nhf/build",
-		"source" : "S:/code/prog1/nhf/nhf"
+		"build" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build",
+		"source" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 5
 	}
 }
