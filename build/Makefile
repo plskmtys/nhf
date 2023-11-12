@@ -129,6 +129,54 @@ nhf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/build
 .PHONY : nhf/fast
 
+include/menu.o: include/menu.c.o
+.PHONY : include/menu.o
+
+# target to build an object file
+include/menu.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/menu.c.o
+.PHONY : include/menu.c.o
+
+include/menu.i: include/menu.c.i
+.PHONY : include/menu.i
+
+# target to preprocess a source file
+include/menu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/menu.c.i
+.PHONY : include/menu.c.i
+
+include/menu.s: include/menu.c.s
+.PHONY : include/menu.s
+
+# target to generate assembly for a file
+include/menu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/menu.c.s
+.PHONY : include/menu.c.s
+
+include/vcard.o: include/vcard.c.o
+.PHONY : include/vcard.o
+
+# target to build an object file
+include/vcard.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/vcard.c.o
+.PHONY : include/vcard.c.o
+
+include/vcard.i: include/vcard.c.i
+.PHONY : include/vcard.i
+
+# target to preprocess a source file
+include/vcard.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/vcard.c.i
+.PHONY : include/vcard.c.i
+
+include/vcard.s: include/vcard.c.s
+.PHONY : include/vcard.s
+
+# target to generate assembly for a file
+include/vcard.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/vcard.c.s
+.PHONY : include/vcard.c.s
+
 main.o: main.c.o
 .PHONY : main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nhf"
+	@echo "... include/menu.o"
+	@echo "... include/menu.i"
+	@echo "... include/menu.s"
+	@echo "... include/vcard.o"
+	@echo "... include/vcard.i"
+	@echo "... include/vcard.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

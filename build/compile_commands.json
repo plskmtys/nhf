@@ -4,5 +4,17 @@
   "command": "/usr/bin/gcc  -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/main.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c",
   "file": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c",
   "output": "CMakeFiles/nhf.dir/main.c.o"
+},
+{
+  "directory": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build",
+  "command": "/usr/bin/gcc  -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/include/menu.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c",
+  "file": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c",
+  "output": "CMakeFiles/nhf.dir/include/menu.c.o"
+},
+{
+  "directory": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build",
+  "command": "/usr/bin/gcc  -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/include/vcard.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c",
+  "file": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c",
+  "output": "CMakeFiles/nhf.dir/include/vcard.c.o"
 }
 ]

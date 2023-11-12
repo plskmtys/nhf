@@ -6,5 +6,8 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(nhf
+        include/debugmalloc.h
         main.c
-        include/debugmalloc.h)
+        include/menu.c
+        include/vcard.c
+        )

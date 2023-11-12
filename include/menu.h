@@ -46,30 +46,8 @@ const char *view_options[] = {
     NULL
 };
 
-//UNUSED
-int fomenu(){
-    printf("telefonkönyv\nFŐMENÜ\n");
-    for(int i=0; i<4; i++) printf("(%d) %s\n", i+1, main_options[i]);
-    printf("\n");
-    int choice=0;
-    scanf(" %d", &choice);
-    return choice;
-}
-//END_UNUSED
+char menukiir(const char **lista);
 
-char menukiir(const char **lista){
-    char choice;
-    for(int i=0; lista[i] != NULL; i++) printf("(%d) %s\n", i+1, lista[i]);
-    printf("\n");
-    scanf(" %c", &choice);
-    return choice;
-}
-
-char *beker(const char *prompt){
-    char *ans = "";
-    printf("\n%s ", prompt);
-    scanf(" %s", ans);
-    return ans;
-}
+char *beker(const char *prompt);
 
 #endif //NHF_MENU_H
