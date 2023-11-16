@@ -4,47 +4,17 @@
 #ifndef NHF_MENU_H
 #define NHF_MENU_H
 
-const char *main_options[] = {
-    "új kontakt",
-    "kontaktok megtekintése",
-    "keresés",
-    "összes exportálása",
-    NULL
-};
+extern const char *main_options[];
 
-const char *newc_options[] = {
-    "név",
-    "telefonszám",
-    "email",
-    "cím",
-    "születésnap",
-    "cég",
-    "foglalkozás",
-    "megjegyzés",
-    NULL
-};
+extern const char *newc_options[];
 
-const char *name_options[] = {
-    "név előtag",
-    "keresztnév",
-    "második név",
-    "vezetéknév",
-    "név utótag",
-    NULL
-};
+extern const char *name_options[];
 
-const char *org_options[] = {
-    "szervezet",
-    "beosztás",
-    NULL
-};
+extern const char *org_options[];
 
-const char *view_options[] = {
-    "szerkesztés",
-    "exportálás",
-    "törlés",
-    NULL
-};
+extern const char *view_options[];
+
+extern const char *address_options[];
 
 char menukiir(const char **lista);
 

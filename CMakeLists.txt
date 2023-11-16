@@ -10,4 +10,5 @@ add_executable(nhf
         main.c
         include/menu.c
         include/vcard.c
+        include/lista.c
         )

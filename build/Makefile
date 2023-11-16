@@ -129,6 +129,30 @@ nhf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/build
 .PHONY : nhf/fast
 
+include/lista.o: include/lista.c.o
+.PHONY : include/lista.o
+
+# target to build an object file
+include/lista.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/lista.c.o
+.PHONY : include/lista.c.o
+
+include/lista.i: include/lista.c.i
+.PHONY : include/lista.i
+
+# target to preprocess a source file
+include/lista.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/lista.c.i
+.PHONY : include/lista.c.i
+
+include/lista.s: include/lista.c.s
+.PHONY : include/lista.s
+
+# target to generate assembly for a file
+include/lista.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/lista.c.s
+.PHONY : include/lista.c.s
+
 include/menu.o: include/menu.c.o
 .PHONY : include/menu.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nhf"
+	@echo "... include/lista.o"
+	@echo "... include/lista.i"
+	@echo "... include/lista.s"
 	@echo "... include/menu.o"
 	@echo "... include/menu.i"
 	@echo "... include/menu.s"

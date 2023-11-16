@@ -79,6 +79,24 @@
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h">
 			<Option target="nhf"/>
 		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.h">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.h">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h">
+			<Option target="nhf"/>
+		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c">
 			<Option target="nhf"/>
 		</Unit>

@@ -16,5 +16,11 @@
   "command": "/usr/bin/gcc  -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/include/vcard.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c",
   "file": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c",
   "output": "CMakeFiles/nhf.dir/include/vcard.c.o"
+},
+{
+  "directory": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build",
+  "command": "/usr/bin/gcc  -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/include/lista.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c",
+  "file": "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c",
+  "output": "CMakeFiles/nhf.dir/include/lista.c.o"
 }
 ]

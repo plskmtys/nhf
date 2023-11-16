@@ -7,65 +7,77 @@
     #include <windows.h>
 #endif
 #include "include/menu.h"
+#include "include/lista.h"
+
+
 
 int main(){
     #ifdef _WIN32
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
     #endif
+
+    //ListaElem *elso = (ListaElem*) malloc(sizeof(ListaElem));
     char next = '0';
     while(next != 'x'){
-        //főmenü kiírása
         char next=menukiir(main_options);
         //printf("valasztas: %c\n", next);
         switch(next){
 
             //új
             case('1'):
-                contact uj;
-                InitContact(uj);
+                contact *uj = (contact*) malloc(sizeof(contact));
+                //vegere_beszur(elso, *uj);
+                InitContact(*uj);
                 while(next != 'b'){
                     next = menukiir(newc_options);
                     switch (next)
                     {
                         //név
                         case '1':
-                            uj.fn = beker(newc_options[0]);
+                            uj->fn = beker(newc_options[0]);
                             break;
 
                         //tel
                         case '2':
-                            uj.phone = beker(newc_options[1]);
+                            uj->phone = beker(newc_options[1]);
                             break;
 
                         //email
                         case '3':
-                            uj.email = beker(newc_options[2]);
+                            uj->email = beker(newc_options[2]);
                             break;
 
                         //address
                         case '4':
-                            uj.address1 = StrToAddr(beker(newc_options[3]));
+                            uj->address = InitAddress(uj->address);
+                            while(next != 'b'){
+                                next = menukiir(address_options);
+                                switch(next){
+                                    //TODO cím
+                                }
+                            }
+                            next = '0';
                             break;
 
                         //bday
                         case '5':
-                            uj.bday = StrToDate(beker(newc_options[4]));
+                            uj->bday = beker(newc_options[4]);
                             break;
 
                         //org
                         case '6':
-                            uj.org = beker(newc_options[5]);
+                            uj->org = beker(newc_options[5]);
                             break;
 
                         //title
                         case '7':
-                            uj.title = beker(newc_options[6]);
+                            uj->title = beker(newc_options[6]);
                             break;
 
                         //note
                         case '8':
-                            uj.note = beker(newc_options[7]);
+                            uj->note = beker(newc_options[7]);
                             break;
 
                         //save
@@ -80,7 +92,7 @@ int main(){
             //view all
             case('2'):
                 next = menukiir(view_options);
-
+                break;
             //search
             case '3':
                 /*code for search*/

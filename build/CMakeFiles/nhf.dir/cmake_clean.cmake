@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/nhf.dir/include/lista.c.o"
+  "CMakeFiles/nhf.dir/include/lista.c.o.d"
   "CMakeFiles/nhf.dir/include/menu.c.o"
   "CMakeFiles/nhf.dir/include/menu.c.o.d"
   "CMakeFiles/nhf.dir/include/vcard.c.o"
