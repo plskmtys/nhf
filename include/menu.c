@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "menu.h"
+#include "vcard.h"
 
 /** @brief A főmenü opcióit tartalmazó lista.*/
 const char *main_options[] = {
@@ -80,3 +81,9 @@ char *beker(const char *prompt){
     scanf(" %s", ans);
     return ans;
 }
+
+/*
+char contactmenu(contact *c){
+    printf("");
+}
+ */

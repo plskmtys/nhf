@@ -8,6 +8,7 @@
 #endif
 #include "include/menu.h"
 #include "include/lista.h"
+#include <string.h>
 
 
 
@@ -17,43 +18,88 @@ int main(){
         SetConsoleOutputCP(1250);
     #endif
 
-    //ListaElem *elso = (ListaElem*) malloc(sizeof(ListaElem));
+    printf("\n----TELEFONKÖNYV----\nvezérlés:\n-az adott menübe lépéshez adja meg a sorszámát. ha kész, ENTER.\n-kilépés: 'x'\n-visszalépés: 'b'\n");
+
+    ListaElem *elso = (ListaElem*) malloc(sizeof(ListaElem));
+    elso->next = NULL;
     char next = '0';
     while(next != 'x'){
-        char next=menukiir(main_options);
+        printf("\n----FŐMENÜ----\n");
+        next=menukiir(main_options);
         //printf("valasztas: %c\n", next);
         switch(next){
 
             //új
-            case('1'):
-                contact *uj = (contact*) malloc(sizeof(contact));
-                //vegere_beszur(elso, *uj);
-                InitContact(*uj);
-                while(next != 'b'){
+            case '1': {
+                //contact *uj = (contact*) malloc(sizeof(contact));
+                contact uj;
+                //uj = InitContact(uj);
+                while (next != 'b' && next != 'x') {
                     next = menukiir(newc_options);
-                    switch (next)
-                    {
+                    switch (next) {
                         //név
                         case '1':
-                            uj->fn = beker(newc_options[0]);
+                            //printf("%s:\t(max. %lu karakter)\n", newc_options[0], sizeof(uj.fn)-1);
+
+                            while(next != 'b' && next != 'x'){
+                                next = menukiir(name_options);
+                                switch (next) {
+                                    case '1':
+                                        printf("%s:\t\t(max. %lu karakter)\n", name_options[0], sizeof(uj.name.prefix)-1);
+                                        scanf(" %s", uj.name.prefix);
+                                        next = '0';
+                                        fflush(stdin);
+                                        break;
+                                    case '2':
+                                        printf("%s:\t\t(max. %lu karakter)\n", name_options[1], sizeof(uj.name.first)-1);
+                                        scanf(" %s", uj.name.first);
+                                        next = '0';
+                                        fflush(stdin);
+                                        break;
+                                    case '3':
+                                        printf("%s:\t\t(max. %lu karakter)\n", name_options[2], sizeof(uj.name.middle)-1);
+                                        scanf(" %s", uj.name.middle);
+                                        next = '0';
+                                        fflush(stdin);
+                                        break;
+                                    case '4':
+                                        printf("%s:\t\t(max. %lu karakter)\n", name_options[3], sizeof(uj.name.last)-1);
+                                        scanf(" %s", uj.name.last);
+                                        next = '0';
+                                        fflush(stdin);
+                                        break;
+                                    case '5':
+                                        printf("%s:\t\t(max. %lu karakter)\n", name_options[0], sizeof(uj.name.suffix)-1);
+                                        scanf(" %s", uj.name.suffix);
+                                        next = '0';
+                                        fflush(stdin);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
                             break;
 
                         //tel
                         case '2':
-                            uj->phone = beker(newc_options[1]);
+                            printf("%s:\t\t(max. %lu karakter)\n", newc_options[1], sizeof(uj.phone)-1);
+                            scanf(" %s", uj.phone);
+                            next = '0';
+                            fflush(stdin);
                             break;
 
                         //email
                         case '3':
-                            uj->email = beker(newc_options[2]);
+                            printf("%s\n", newc_options[2]);
+                            strcpy(uj.email, sor_olvas());
                             break;
 
                         //address
                         case '4':
-                            uj->address = InitAddress(uj->address);
-                            while(next != 'b'){
+                            //uj->address = InitAddress(uj->address);
+                            while (next != 'b') {
                                 next = menukiir(address_options);
-                                switch(next){
+                                switch (next) {
                                     //TODO cím
                                 }
                             }
@@ -62,22 +108,26 @@ int main(){
 
                         //bday
                         case '5':
-                            uj->bday = beker(newc_options[4]);
+                            printf("%s\n", newc_options[4]);
+                            strcpy(uj.bday, sor_olvas());
                             break;
 
                         //org
                         case '6':
-                            uj->org = beker(newc_options[5]);
+                            printf("%s\n", newc_options[5]);
+                            strcpy(uj.org, sor_olvas());
                             break;
 
                         //title
                         case '7':
-                            uj->title = beker(newc_options[6]);
+                            printf("%s\n", newc_options[6]);
+                            strcpy(uj.title, sor_olvas());
                             break;
 
                         //note
                         case '8':
-                            uj->note = beker(newc_options[7]);
+                            printf("%s\n", newc_options[7]);
+                            strcpy(uj.note, sor_olvas());
                             break;
 
                         //save
@@ -86,11 +136,12 @@ int main(){
                         default:
                             break;
                     }
-                    break;
                 }
-
+                elso = vegere_beszur(elso, uj);
+                break;
+            }
             //view all
-            case('2'):
+            case '2':
                 next = menukiir(view_options);
                 break;
             //search

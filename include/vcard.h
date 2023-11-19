@@ -6,42 +6,42 @@
 
 /** @brief Teljes név tárolására használt struktúra.*/
 typedef struct fullname{
-    char prefix[10];
-    char *first;
-    char *middle;
-    char *last;
-    char suffix[10];
+    char prefix[16];
+    char first[128];
+    char middle[128];
+    char last[128];
+    char suffix[16];
 }fullname;
 
 /** @brief Cím tárolására használt struktúra.*/
 typedef struct address{
-    char *type;
-    char zip[12];
-    char *street_no;
-    char *city;
-    char *country;
-    char *county;
+    char type[64];
+    char zip[16];
+    char street_no[128];
+    char city[128];
+    char country[128];
+    char county[128];
 }address;
 
 /** @brief Egy kontakt összes adatának tárolására használt struktúra.*/
 typedef struct contact{
     char phone[20];
-    char *fn;
+    char fn[420];
     fullname name;
-    char *email;
+    char email[256];
     address address;
-    char bday[6];
-    char *note;
-    char *org;
-    char *title;
+    char bday[9];
+    char note[512];
+    char org[128];
+    char title[128];
 }contact;
 
 fullname InitName(fullname empty);
 
 contact InitContact(contact empty);
 
-address InitAddress();
+address InitAddress(address empty);
 
 void writecard(char *filename, contact out);
 
-#endif //VCARD_H
+#endif //NHF_VCARD_H

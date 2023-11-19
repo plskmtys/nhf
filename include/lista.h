@@ -21,4 +21,6 @@ ListaElem *vegere_beszur(ListaElem *elso, contact uj);
 
 ListaElem *keres(ListaElem *eleje, char *keresett);
 
+char *sor_olvas();
+
 #endif //NHF_LISTA_H

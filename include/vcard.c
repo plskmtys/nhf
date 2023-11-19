@@ -5,41 +5,49 @@
 /** @brief Egy nevet inicializál, üres értékekkel tölti fel.
  *  @returns Üres értékekkel feltöltött, fullname típusú változó.
 */
+
 fullname InitName(fullname empty){
-    empty.first = "";
-    empty.last="";
-    empty.middle="";
-    empty.prefix[0]='\0';
-    empty.suffix[0]='\0';
+    empty.first[0] = '\0';
+    empty.last[0] = '\0';
+    empty.middle[0] = '\0';
+    empty.prefix[0] ='\0';
+    empty.suffix[0] ='\0';
+    return empty;
 }
+
 
 /** @brief Egy címet inicializál, üres értékekkel tölti fel.
  *  @returns Üres értékekkel feltöltött, address típusú változó.
 */
+
 address InitAddress(address empty){
-    empty.street_no = "";
-    empty.city = "";
+    empty.street_no[0] = '\0';
+    empty.city[0] = '\0';
     empty.zip[0]= '\0';
-    empty.county = "";
-    empty.country = "";
-    empty.type = "";
+    empty.county[0] = '\0';
+    empty.country[0] = '\0';
+    empty.type[0] = '\0';
+    return empty;
 }
+
 
 /** @brief Egy kontaktot inicializál, üres értékekkel tölti fel.
  * @returns Üres értékekkel feltöltött, contact típusú változó.
 */
+
 contact InitContact(contact empty){
     empty.phone[0]='\0';
-    empty.fn="";
+    empty.fn[0] = '\0';
     fullname defaultname;
-    empty.name=InitName(defaultname);
-    empty.email="";
+    empty.name = InitName(defaultname);
+    empty.email[0] = '\0';
     address defaultaddress;
-    empty.address=InitAddress(defaultaddress);
-    empty.bday[0]='\0';
-    empty.org="";
-    empty.title="";
-    empty.note="";
+    empty.address = InitAddress(defaultaddress);
+    empty.bday[0] = '\0';
+    empty.org[0] = '\0';
+    empty.title[0] = '\0';
+    empty.note[0] = '\0';
+    return empty;
 }
 
 /** @brief A paraméterként megadott contact típusú változó adatait vCard kiterjesztésű fájlba írja.

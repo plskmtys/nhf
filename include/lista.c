@@ -44,7 +44,6 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
     uj->next = NULL;
     if (eleje == NULL) {
         eleje = uj;
-        //vege = uj;
     } else {
         ListaElem *vege = GetLastItem(eleje);
         vege->next = uj;
@@ -70,20 +69,31 @@ ListaElem *keres(ListaElem *eleje, char *keresett){
     return ret;
 }
 
-char *sor_olvas(){
-    size_t len = 0;
-    size_t maxlen = 10;
-    char *sor = (char*) malloc(sizeof(char)*maxlen);
-    int ch;
-    while(ch != '\n' || ch != EOF){
-        if(len==maxlen){
-            maxlen*=2;
-            sor = (char*) malloc(sizeof(char)*maxlen);
-        }
-        sor[len]=ch;
-        len++;
-        ch = getchar();
+char* sor_olvas() {
+    size_t bufsize = 32;
+    size_t position = 0;
+    char *buffer = malloc(sizeof(char) * bufsize);
+    int c;
+    if (!buffer) {
+        fprintf(stderr, "sor_olvas: memóriafoglalási hiba\n");
+        exit(EXIT_FAILURE);
     }
-    sor[len]='\0';
-    return sor;
+    while (1) {
+        c = getchar();
+        if (c == EOF || c == '\n') {
+            buffer[position] = '\0';
+            return buffer;
+        } else {
+            buffer[position] = c;
+        }
+        position++;
+        if (position >= bufsize) {
+            bufsize += 32;
+            buffer = realloc(buffer, bufsize);
+            if (!buffer) {
+                fprintf(stderr, "sor_olvas: memóriafoglalási hiba\n");
+                exit(EXIT_FAILURE);
+            }
+        }
+    }
 }
