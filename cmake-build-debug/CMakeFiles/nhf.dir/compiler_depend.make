@@ -129,6 +129,7 @@ CMakeFiles/nhf.dir/include/menu.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf
   /usr/include/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/bits/stdlib-float.h \
+  /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h \
   /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stdbool.h \
   /usr/include/ctype.h \
@@ -272,9 +273,9 @@ CMakeFiles/nhf.dir/main.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/mai
   /usr/include/bits/unistd_ext.h \
   /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h \
   /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.h \
+  /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h \
   /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h \
-  /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.h \
-  /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h
+  /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.h
 
 
 /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c:

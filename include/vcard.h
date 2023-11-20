@@ -15,7 +15,7 @@ typedef struct fullname{
 
 /** @brief Cím tárolására használt struktúra.*/
 typedef struct address{
-    char type[64];
+    //char type[64];
     char zip[16];
     char street_no[128];
     char city[128];
@@ -41,6 +41,10 @@ fullname InitName(fullname empty);
 contact InitContact(contact empty);
 
 address InitAddress(address empty);
+
+char *straddr(address *a);
+
+char *strfn(fullname *n);
 
 void writecard(char *filename, contact out);
 

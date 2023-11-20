@@ -8,7 +8,8 @@ include_directories(.)
 add_executable(nhf
         include/debugmalloc.h
         main.c
+        #func_test.c
         include/menu.c
         include/vcard.c
         include/lista.c
-        )
+)

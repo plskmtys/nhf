@@ -26,7 +26,7 @@ address InitAddress(address empty){
     empty.zip[0]= '\0';
     empty.county[0] = '\0';
     empty.country[0] = '\0';
-    empty.type[0] = '\0';
+    //empty.type[0] = '\0';
     return empty;
 }
 
@@ -48,6 +48,32 @@ contact InitContact(contact empty){
     empty.title[0] = '\0';
     empty.note[0] = '\0';
     return empty;
+}
+
+char *straddr(address *a){
+    char *ret = (char*) malloc(sizeof(*a));
+    char *attr[] = {
+            a->zip,
+            a->city,
+            a->street_no,
+            a->county,
+            a->country
+    };
+    for(int i=0; i<5; i++) if(attr[i][0] != '\0') sprintf(ret, "%s ", attr[i]);
+    return ret;
+}
+
+char *strfn(fullname *n){
+    char *ret = (char*) malloc(sizeof(*n));
+    char *attr[] = {
+            n->prefix,
+            n->first,
+            n->middle,
+            n->last,
+            n->suffix
+    };
+    for(int i=0; i<5; i++) if(attr[i][0] != '\0') sprintf(ret, "%s %s", ret, attr[i]);
+    return ret;
 }
 
 /** @brief A paraméterként megadott contact típusú változó adatait vCard kiterjesztésű fájlba írja.

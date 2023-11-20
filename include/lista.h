@@ -23,4 +23,6 @@ ListaElem *keres(ListaElem *eleje, char *keresett);
 
 char *sor_olvas();
 
+void lista_kiir_short(ListaElem *eleje);
+
 #endif //NHF_LISTA_H

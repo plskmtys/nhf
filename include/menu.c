@@ -75,15 +75,26 @@ char menukiir(const char **lista){
  * @param prompt
  * @returns Visszatér a felhasználótól bekért karakterrel.
 */ 
-char *beker(const char *prompt){
-    char *ans = "";
-    printf("\n%s ", prompt);
-    scanf(" %s", ans);
-    return ans;
+char *beker(const char *prompt, char* dest, size_t size){
+    printf("%s:\t\t(max. %lu karakter)\n", prompt, size-1);
+    scanf(" %s", dest);
+    fflush(stdin);
+    return dest;
 }
 
-/*
 char contactmenu(contact *c){
-    printf("");
+    char choice;
+    char *adr = straddr(&c->address);
+    char *attr[] = {c->fn, c->phone, c->email, adr, c->bday, c->org, c->title, c->note, NULL};
+    for(int i=0; attr[i]!=NULL; i++) printf("(%d) %s:  %s\n", i+1, newc_options[i], attr[i]);
+    scanf(" %c", &choice);
+    return choice;
 }
- */
+
+char namemenu(contact *c){
+    char choice;
+    char *attr[] = {c->name.prefix, c->name.first, c->name.middle, c->name.last, c->name.suffix, NULL};
+    for(int i=0; attr[i] != NULL; i++) printf("(%d) %s:  %s\n", i+1, name_options[i], attr[i]);
+    scanf(" %c", &choice);
+    return choice;
+}

@@ -57,15 +57,17 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
  * @param keresett A keresett kifejezés (string).
  * @returns Láncolt lista a keresési eredményekkel.
 */
-ListaElem *keres(ListaElem *eleje, char *keresett){
+ListaElem *keres(ListaElem *eleje, char *needle){
     ListaElem *iter;
-    ListaElem *ret;
+    ListaElem *ret = NULL;
     char *datastr;
-    for (iter = eleje; iter != NULL; iter=iter->next)
-        datastr = (char*) malloc(sizeof(iter)+sizeof(char)*20);
-        sprintf(datastr, "%s %s %s %s %s %s %s %s %s %s", iter->adat.phone, iter->adat.fn, iter->adat.address.street_no, iter->adat.address.city, iter->adat.address.zip, iter->adat.address.county, iter->adat.address.country, iter->adat.email, iter->adat.org, iter->adat.title);
-        if(strstr(datastr, keresett) != NULL) vegere_beszur(ret, iter->adat);
+    for (iter = eleje; iter != NULL; iter=iter->next) {
+        datastr = (char *) malloc(sizeof(*iter) + sizeof(char) * 6);
+        sprintf(datastr, "%s %s %s %s %s %s\n", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
+                iter->adat.email, iter->adat.org, iter->adat.title);
+        if (strstr(datastr, needle) != NULL) vegere_beszur(ret, iter->adat);
         free(datastr);
+    }
     return ret;
 }
 
@@ -95,5 +97,13 @@ char* sor_olvas() {
                 exit(EXIT_FAILURE);
             }
         }
+    }
+}
+
+void lista_kiir_short(ListaElem *eleje){
+    ListaElem *iter;
+    int i = 1;
+    for (iter = eleje; iter != NULL ; iter = iter->next, i++) {
+        printf("(%d) %s %s\n", i, iter->adat.fn, iter->adat.phone);
     }
 }
