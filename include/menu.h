@@ -25,4 +25,6 @@ char contactmenu(contact *c);
 
 char namemenu(contact *c);
 
+void clear();
+
 #endif //NHF_MENU_H
