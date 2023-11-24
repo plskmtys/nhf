@@ -81,16 +81,25 @@ char *strfn(fullname *n){
  * @param out A kiírandó contact típusú változó
  * @todo hibakezelés
 */
-void writecard(char *filename, contact out){
+void writecard(char *filename, contact *out){
     sprintf(filename, "cards/%s.vcard", filename);
     FILE *fp = fopen(filename, "w");
     fprintf(fp, "BEGIN:VCARD\nVERSION:4.0\n");
-    fprintf(fp, "FN:%s\n", out.fn);
-    fprintf(fp, "N:%s;%s;%s;%s;%s\n", out.name.last, out.name.first, out.name.middle, out.name.prefix, out.name.suffix);
-    fprintf(fp, "TEL:%s\n", out.phone);
-    fprintf(fp, "ADDR;TYPE=home:;;%s;%s;%s;%s;%s\n", out.address.street_no, out.address.city, out.address.county, out.address.zip, out.address.country);
-    fprintf(fp, "BDAY:%s\n",out.bday);
-    fprintf(fp, "EMAIL:%s\n", out.email);
-    fprintf(fp, "NOTE:%s\n", out.note);
+    fprintf(fp, "FN:%s\n", out->fn);
+    fprintf(fp, "N:%s;%s;%s;%s;%s\n", out->name.last, out->name.first, out->name.middle, out->name.prefix, out->name.suffix);
+    fprintf(fp, "TEL:%s\n", out->phone);
+    fprintf(fp, "ADDR;TYPE=home:;;%s;%s;%s;%s;%s\n", out->address.street_no, out->address.city, out->address.county, out->address.zip, out->address.country);
+    fprintf(fp, "BDAY:%s\n",out->bday);
+    fprintf(fp, "EMAIL:%s\n", out->email);
+    fprintf(fp, "NOTE:%s\n", out->note);
     fprintf(fp, "END:VCARD");
+}
+
+contact *readcard(char *filename){
+    sprintf(filename, "cards/%s.vcard", filename);
+    FILE *fp = fopen(filename, "r");
+    if(fp == NULL){
+        fprintf(stderr, "\nnem lehet megnyitni a fájlt.");
+        return NULL;
+    }
 }

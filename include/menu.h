@@ -17,6 +17,8 @@ extern const char *view_options[];
 
 extern const char *address_options[];
 
+void olvas(char *s, size_t len);
+
 char menukiir(const char **lista);
 
 char *beker(const char *prompt, char *dest, size_t size);
@@ -26,5 +28,7 @@ char contactmenu(contact *c);
 char namemenu(contact *c);
 
 void clear();
+
+contact *edit_contact(contact *c, char *next);
 
 #endif //NHF_MENU_H

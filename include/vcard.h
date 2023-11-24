@@ -46,6 +46,8 @@ char *straddr(address *a);
 
 char *strfn(fullname *n);
 
-void writecard(char *filename, contact out);
+void writecard(char *filename, contact *out);
+
+contact *readcard(char *filename);
 
 #endif //NHF_VCARD_H
