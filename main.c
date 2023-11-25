@@ -47,12 +47,12 @@ int main(int argc, char **argv){
             case '3': {
                 /*code for search*/
                 clear();
-                char needle[1024];
+                char needle[256];
                 beker("keresett kifejezés: ", needle, sizeof(needle));
                 ListaElem *results_eleje = keres(elso, needle);
                 lista_kiir_short(results_eleje);
                 //clear();
-                scanf(" %c", next);
+
                 //free(results_eleje);
                 //free(needle);
                 break;

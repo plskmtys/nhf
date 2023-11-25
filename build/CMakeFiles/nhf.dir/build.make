@@ -53,10 +53,10 @@ RM = /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf
+CMAKE_SOURCE_DIR = /home/matyas/sata/code/prog1/nhf/nhf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build
+CMAKE_BINARY_DIR = /home/matyas/sata/code/prog1/nhf/nhf/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/nhf.dir/depend.make
@@ -69,65 +69,65 @@ include CMakeFiles/nhf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/nhf.dir/flags.make
 
-CMakeFiles/nhf.dir/main.c.o: CMakeFiles/nhf.dir/flags.make
-CMakeFiles/nhf.dir/main.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c
-CMakeFiles/nhf.dir/main.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nhf.dir/main.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/main.c.o -MF CMakeFiles/nhf.dir/main.c.o.d -o CMakeFiles/nhf.dir/main.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c
+CMakeFiles/nhf.dir/func_test.c.o: CMakeFiles/nhf.dir/flags.make
+CMakeFiles/nhf.dir/func_test.c.o: /home/matyas/sata/code/prog1/nhf/nhf/func_test.c
+CMakeFiles/nhf.dir/func_test.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nhf.dir/func_test.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/func_test.c.o -MF CMakeFiles/nhf.dir/func_test.c.o.d -o CMakeFiles/nhf.dir/func_test.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/func_test.c
 
-CMakeFiles/nhf.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/main.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c > CMakeFiles/nhf.dir/main.c.i
+CMakeFiles/nhf.dir/func_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/func_test.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/func_test.c > CMakeFiles/nhf.dir/func_test.c.i
 
-CMakeFiles/nhf.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/main.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c -o CMakeFiles/nhf.dir/main.c.s
+CMakeFiles/nhf.dir/func_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/func_test.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/func_test.c -o CMakeFiles/nhf.dir/func_test.c.s
 
 CMakeFiles/nhf.dir/include/menu.c.o: CMakeFiles/nhf.dir/flags.make
-CMakeFiles/nhf.dir/include/menu.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c
+CMakeFiles/nhf.dir/include/menu.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c
 CMakeFiles/nhf.dir/include/menu.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nhf.dir/include/menu.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/menu.c.o -MF CMakeFiles/nhf.dir/include/menu.c.o.d -o CMakeFiles/nhf.dir/include/menu.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/nhf.dir/include/menu.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/menu.c.o -MF CMakeFiles/nhf.dir/include/menu.c.o.d -o CMakeFiles/nhf.dir/include/menu.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c
 
 CMakeFiles/nhf.dir/include/menu.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/include/menu.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c > CMakeFiles/nhf.dir/include/menu.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c > CMakeFiles/nhf.dir/include/menu.c.i
 
 CMakeFiles/nhf.dir/include/menu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/include/menu.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c -o CMakeFiles/nhf.dir/include/menu.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c -o CMakeFiles/nhf.dir/include/menu.c.s
 
 CMakeFiles/nhf.dir/include/vcard.c.o: CMakeFiles/nhf.dir/flags.make
-CMakeFiles/nhf.dir/include/vcard.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c
+CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c
 CMakeFiles/nhf.dir/include/vcard.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nhf.dir/include/vcard.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/vcard.c.o -MF CMakeFiles/nhf.dir/include/vcard.c.o.d -o CMakeFiles/nhf.dir/include/vcard.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/nhf.dir/include/vcard.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/vcard.c.o -MF CMakeFiles/nhf.dir/include/vcard.c.o.d -o CMakeFiles/nhf.dir/include/vcard.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c
 
 CMakeFiles/nhf.dir/include/vcard.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/include/vcard.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c > CMakeFiles/nhf.dir/include/vcard.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c > CMakeFiles/nhf.dir/include/vcard.c.i
 
 CMakeFiles/nhf.dir/include/vcard.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/include/vcard.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c -o CMakeFiles/nhf.dir/include/vcard.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c -o CMakeFiles/nhf.dir/include/vcard.c.s
 
 CMakeFiles/nhf.dir/include/lista.c.o: CMakeFiles/nhf.dir/flags.make
-CMakeFiles/nhf.dir/include/lista.c.o: /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c
+CMakeFiles/nhf.dir/include/lista.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/lista.c
 CMakeFiles/nhf.dir/include/lista.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nhf.dir/include/lista.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/lista.c.o -MF CMakeFiles/nhf.dir/include/lista.c.o.d -o CMakeFiles/nhf.dir/include/lista.c.o -c /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/nhf.dir/include/lista.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/include/lista.c.o -MF CMakeFiles/nhf.dir/include/lista.c.o.d -o CMakeFiles/nhf.dir/include/lista.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/include/lista.c
 
 CMakeFiles/nhf.dir/include/lista.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/include/lista.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c > CMakeFiles/nhf.dir/include/lista.c.i
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/include/lista.c > CMakeFiles/nhf.dir/include/lista.c.i
 
 CMakeFiles/nhf.dir/include/lista.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/include/lista.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c -o CMakeFiles/nhf.dir/include/lista.c.s
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/include/lista.c -o CMakeFiles/nhf.dir/include/lista.c.s
 
 # Object files for target nhf
 nhf_OBJECTS = \
-"CMakeFiles/nhf.dir/main.c.o" \
+"CMakeFiles/nhf.dir/func_test.c.o" \
 "CMakeFiles/nhf.dir/include/menu.c.o" \
 "CMakeFiles/nhf.dir/include/vcard.c.o" \
 "CMakeFiles/nhf.dir/include/lista.c.o"
@@ -135,17 +135,17 @@ nhf_OBJECTS = \
 # External object files for target nhf
 nhf_EXTERNAL_OBJECTS =
 
-nhf: CMakeFiles/nhf.dir/main.c.o
-nhf: CMakeFiles/nhf.dir/include/menu.c.o
-nhf: CMakeFiles/nhf.dir/include/vcard.c.o
-nhf: CMakeFiles/nhf.dir/include/lista.c.o
-nhf: CMakeFiles/nhf.dir/build.make
-nhf: CMakeFiles/nhf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable nhf"
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/func_test.c.o
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/menu.c.o
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/vcard.c.o
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/lista.c.o
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/build.make
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable /home/matyas/sata/code/prog1/nhf/nhf/nhf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/nhf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/nhf.dir/build: nhf
+CMakeFiles/nhf.dir/build: /home/matyas/sata/code/prog1/nhf/nhf/nhf
 .PHONY : CMakeFiles/nhf.dir/build
 
 CMakeFiles/nhf.dir/clean:
@@ -153,6 +153,6 @@ CMakeFiles/nhf.dir/clean:
 .PHONY : CMakeFiles/nhf.dir/clean
 
 CMakeFiles/nhf.dir/depend:
-	cd /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles/nhf.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/matyas/sata/code/prog1/nhf/nhf/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/matyas/sata/code/prog1/nhf/nhf /home/matyas/sata/code/prog1/nhf/nhf /home/matyas/sata/code/prog1/nhf/nhf/build /home/matyas/sata/code/prog1/nhf/nhf/build /home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles/nhf.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/nhf.dir/depend
 

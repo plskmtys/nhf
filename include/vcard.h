@@ -48,6 +48,6 @@ char *strfn(fullname *n);
 
 void writecard(char *filename, contact *out);
 
-contact *readcard(char *filename);
+contact *readcard(char *filename, contact *c);
 
 #endif //NHF_VCARD_H

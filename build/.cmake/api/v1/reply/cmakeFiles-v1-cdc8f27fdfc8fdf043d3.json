@@ -6,7 +6,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake"
+			"path" : "build/CMakeFiles/3.26.4/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -15,7 +15,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+			"path" : "build/CMakeFiles/3.26.4/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -41,21 +41,6 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/Platform/UnixPaths.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindCodeBlocks.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/share/cmake-3.26/Modules/ProcessorCount.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -101,8 +86,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug",
-		"source" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"
+		"build" : "/home/matyas/sata/code/prog1/nhf/nhf/build",
+		"source" : "/home/matyas/sata/code/prog1/nhf/nhf"
 	},
 	"version" : 
 	{

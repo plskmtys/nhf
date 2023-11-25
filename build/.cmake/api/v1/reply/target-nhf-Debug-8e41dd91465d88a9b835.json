@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "nhf"
+			"path" : "/home/matyas/sata/code/prog1/nhf/nhf/nhf"
 		}
 	],
 	"backtrace" : 1,
@@ -25,7 +25,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -42,14 +42,14 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11 -fdiagnostics-color=always"
+					"fragment" : "-g -std=gnu11"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/."
+					"path" : "/home/matyas/sata/code/prog1/nhf/nhf/."
 				}
 			],
 			"language" : "C",
@@ -123,7 +123,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "func_test.c",
 			"sourceGroupIndex" : 1
 		},
 		{

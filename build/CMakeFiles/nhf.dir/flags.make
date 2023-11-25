@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/.
+C_INCLUDES = -I/home/matyas/sata/code/prog1/nhf/nhf/.
 
 C_FLAGS = -g -std=gnu11
 

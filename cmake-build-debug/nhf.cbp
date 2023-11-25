@@ -76,6 +76,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/func_test.c">
+			<Option target="nhf"/>
+		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h">
 			<Option target="nhf"/>
 		</Unit>
@@ -95,9 +98,6 @@
 			<Option target="nhf"/>
 		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h">
-			<Option target="nhf"/>
-		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c">
 			<Option target="nhf"/>
 		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/CMakeLists.txt">

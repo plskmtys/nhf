@@ -57,10 +57,10 @@ RM = /var/lib/snapd/snap/clion/250/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf
+CMAKE_SOURCE_DIR = /home/matyas/sata/code/prog1/nhf/nhf
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build
+CMAKE_BINARY_DIR = /home/matyas/sata/code/prog1/nhf/nhf/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles /home/matyas/sata/code/prog1/nhf/nhf/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ nhf: cmake_check_build_system
 nhf/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/build
 .PHONY : nhf/fast
+
+func_test.o: func_test.c.o
+.PHONY : func_test.o
+
+# target to build an object file
+func_test.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/func_test.c.o
+.PHONY : func_test.c.o
+
+func_test.i: func_test.c.i
+.PHONY : func_test.i
+
+# target to preprocess a source file
+func_test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/func_test.c.i
+.PHONY : func_test.c.i
+
+func_test.s: func_test.c.s
+.PHONY : func_test.s
+
+# target to generate assembly for a file
+func_test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/func_test.c.s
+.PHONY : func_test.c.s
 
 include/lista.o: include/lista.c.o
 .PHONY : include/lista.o
@@ -201,30 +225,6 @@ include/vcard.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/include/vcard.c.s
 .PHONY : include/vcard.c.s
 
-main.o: main.c.o
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/nhf.dir/build.make CMakeFiles/nhf.dir/main.c.s
-.PHONY : main.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... nhf"
+	@echo "... func_test.o"
+	@echo "... func_test.i"
+	@echo "... func_test.s"
 	@echo "... include/lista.o"
 	@echo "... include/lista.i"
 	@echo "... include/lista.s"
@@ -243,9 +246,6 @@ help:
 	@echo "... include/vcard.o"
 	@echo "... include/vcard.i"
 	@echo "... include/vcard.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

@@ -85,9 +85,9 @@ char menukiir(const char **lista){
  * @returns Visszatér a felhasználótól bekért karakterrel.
 */ 
 char *beker(const char *prompt, char* dest, size_t size){
+    //while ((getchar()) != '\n');
     clear();
     printf("%s:\t\t(max. %lu karakter)\n", prompt, size-1);
-    //scanf(" %s", dest);
     olvas(dest, size);
     //while ((getchar()) != '\n');
     return dest;
