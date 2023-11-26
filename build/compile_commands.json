@@ -1,9 +1,9 @@
 [
 {
   "directory": "/home/matyas/sata/code/prog1/nhf/nhf/build",
-  "command": "/usr/bin/gcc  -I/home/matyas/sata/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/func_test.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/func_test.c",
-  "file": "/home/matyas/sata/code/prog1/nhf/nhf/func_test.c",
-  "output": "CMakeFiles/nhf.dir/func_test.c.o"
+  "command": "/usr/bin/gcc  -I/home/matyas/sata/code/prog1/nhf/nhf/. -g -std=gnu11 -o CMakeFiles/nhf.dir/main.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/main.c",
+  "file": "/home/matyas/sata/code/prog1/nhf/nhf/main.c",
+  "output": "CMakeFiles/nhf.dir/main.c.o"
 },
 {
   "directory": "/home/matyas/sata/code/prog1/nhf/nhf/build",

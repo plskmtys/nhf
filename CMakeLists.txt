@@ -9,8 +9,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_executable(nhf
         include/debugmalloc.h
-        #main.c
-        func_test.c
+        main.c
+        #func_test.c
         include/menu.c
         include/vcard.c
         include/lista.c

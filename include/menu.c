@@ -10,6 +10,7 @@ const char *main_options[] = {
     "kontaktok megtekintése",
     "keresés",
     "összes exportálása",
+    "összes importálása",
     NULL
 };
 

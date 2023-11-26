@@ -15,7 +15,7 @@ int main(int argc, char **argv){
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
     #endif
-    clear();
+    //clear();
     printf("\n----TELEFONKÖNYV----\nvezérlés:\n-az adott menübe lépéshez adja meg a sorszámát. ha kész, ENTER.\n-kilépés: 'x'\n-visszalépés: 'b'\n");
 
     ListaElem *elso = NULL;
@@ -53,23 +53,31 @@ int main(int argc, char **argv){
                 lista_kiir_short(results_eleje);
                 //clear();
 
-                //free(results_eleje);
-                //free(needle);
                 break;
             }
 
             //export
             case '4': {
-                /*code for export*/
-                clear();
+                for(ListaElem *iter = elso; iter != NULL; iter = iter->next){
+                    if(writecard(iter->adat.fn, &iter->adat)){
+                        printf("sikertelen export: %s\n", iter->adat.fn);
+                    } else {
+                        printf("sikeres export: %s\n", iter->adat.fn);
+                    }
+                }
+                //clear();
                 break;
             }
 
+            case '5':{
+                elso = import_all(elso);
+                break;
+            }
             default:
                 clear();
                 break;
         }
     }
     clear();
-    free(elso);
+    lista_free(elso);
 }

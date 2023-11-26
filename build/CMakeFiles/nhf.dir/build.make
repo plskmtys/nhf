@@ -69,19 +69,19 @@ include CMakeFiles/nhf.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/nhf.dir/flags.make
 
-CMakeFiles/nhf.dir/func_test.c.o: CMakeFiles/nhf.dir/flags.make
-CMakeFiles/nhf.dir/func_test.c.o: /home/matyas/sata/code/prog1/nhf/nhf/func_test.c
-CMakeFiles/nhf.dir/func_test.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nhf.dir/func_test.c.o"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/func_test.c.o -MF CMakeFiles/nhf.dir/func_test.c.o.d -o CMakeFiles/nhf.dir/func_test.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/func_test.c
+CMakeFiles/nhf.dir/main.c.o: CMakeFiles/nhf.dir/flags.make
+CMakeFiles/nhf.dir/main.c.o: /home/matyas/sata/code/prog1/nhf/nhf/main.c
+CMakeFiles/nhf.dir/main.c.o: CMakeFiles/nhf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matyas/sata/code/prog1/nhf/nhf/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/nhf.dir/main.c.o"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/nhf.dir/main.c.o -MF CMakeFiles/nhf.dir/main.c.o.d -o CMakeFiles/nhf.dir/main.c.o -c /home/matyas/sata/code/prog1/nhf/nhf/main.c
 
-CMakeFiles/nhf.dir/func_test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/func_test.c.i"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/func_test.c > CMakeFiles/nhf.dir/func_test.c.i
+CMakeFiles/nhf.dir/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/nhf.dir/main.c.i"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/matyas/sata/code/prog1/nhf/nhf/main.c > CMakeFiles/nhf.dir/main.c.i
 
-CMakeFiles/nhf.dir/func_test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/func_test.c.s"
-	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/func_test.c -o CMakeFiles/nhf.dir/func_test.c.s
+CMakeFiles/nhf.dir/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/nhf.dir/main.c.s"
+	/usr/bin/gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/matyas/sata/code/prog1/nhf/nhf/main.c -o CMakeFiles/nhf.dir/main.c.s
 
 CMakeFiles/nhf.dir/include/menu.c.o: CMakeFiles/nhf.dir/flags.make
 CMakeFiles/nhf.dir/include/menu.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c
@@ -127,7 +127,7 @@ CMakeFiles/nhf.dir/include/lista.c.s: cmake_force
 
 # Object files for target nhf
 nhf_OBJECTS = \
-"CMakeFiles/nhf.dir/func_test.c.o" \
+"CMakeFiles/nhf.dir/main.c.o" \
 "CMakeFiles/nhf.dir/include/menu.c.o" \
 "CMakeFiles/nhf.dir/include/vcard.c.o" \
 "CMakeFiles/nhf.dir/include/lista.c.o"
@@ -135,7 +135,7 @@ nhf_OBJECTS = \
 # External object files for target nhf
 nhf_EXTERNAL_OBJECTS =
 
-/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/func_test.c.o
+/home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/main.c.o
 /home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/menu.c.o
 /home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/vcard.c.o
 /home/matyas/sata/code/prog1/nhf/nhf/nhf: CMakeFiles/nhf.dir/include/lista.c.o

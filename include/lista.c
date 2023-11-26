@@ -1,8 +1,10 @@
 #include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <sys/stat.h>
 #include "vcard.h"
 #include "debugmalloc.h"
 #include "lista.h"
-#include <string.h>
 
 int listahossz(ListaElem *elso){
     ListaElem *eleje = elso;
@@ -49,7 +51,10 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
         vege->next = uj;
         vege = uj;
     }
-    return eleje;
+    return eleje;/** @brief A név részeit a struktúra fullname változójába másolja be.
+ * @returns Teljes név egyetlen stringben
+ * @param n A kontakt neve
+ * */
 }
 
 /** @brief Megkeres egy kifejezést az adatbázisban, és visszaad egy listát az összes olyan kontakttal, ami tartalmazza a keresett kifejezést valamilyen mezőben.
@@ -106,4 +111,32 @@ void lista_kiir_short(ListaElem *eleje){
     for (iter = eleje; iter != NULL ; iter = iter->next, i++) {
         printf("(%d) %s %s\n", i, iter->adat.fn, iter->adat.phone);
     }
+}
+
+ListaElem *import_all(ListaElem *eleje) {
+    DIR *d;
+    struct dirent *dir;
+    struct stat path_stat;
+    char filepath[512];
+
+    d = opendir("cards");
+    if(d == NULL) {
+        printf("nem lehet megnyitni a mappát.\n");
+        return eleje;
+    }
+    if (d) {
+        while ((dir = readdir(d)) != NULL) {
+            snprintf(filepath, sizeof(filepath), "cards/%s", dir->d_name);  // construct the full path
+            if(stat(filepath, &path_stat) == 0 && S_ISREG(path_stat.st_mode)) {
+                printf("importálás: %s\n", dir->d_name);
+                contact c;
+                InitContact(c);
+                readcard(dir->d_name, &c);
+                vegere_beszur(eleje, c);
+            }
+        }
+        closedir(d);
+    }
+
+    return eleje;
 }

@@ -1,14 +1,14 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/nhf.dir/func_test.c.o"
-  "CMakeFiles/nhf.dir/func_test.c.o.d"
+  "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf"
+  "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf.pdb"
   "CMakeFiles/nhf.dir/include/lista.c.o"
   "CMakeFiles/nhf.dir/include/lista.c.o.d"
   "CMakeFiles/nhf.dir/include/menu.c.o"
   "CMakeFiles/nhf.dir/include/menu.c.o.d"
   "CMakeFiles/nhf.dir/include/vcard.c.o"
   "CMakeFiles/nhf.dir/include/vcard.c.o.d"
-  "nhf"
-  "nhf.pdb"
+  "CMakeFiles/nhf.dir/main.c.o"
+  "CMakeFiles/nhf.dir/main.c.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

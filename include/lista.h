@@ -25,4 +25,6 @@ char *sor_olvas();
 
 void lista_kiir_short(ListaElem *eleje);
 
+ListaElem *import_all(ListaElem *eleje);
+
 #endif //NHF_LISTA_H

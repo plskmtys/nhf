@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
 
 #ifndef NHF_VCARD_H
 #define NHF_VCARD_H
@@ -46,7 +48,7 @@ char *straddr(address *a);
 
 char *strfn(fullname *n);
 
-void writecard(char *filename, contact *out);
+int writecard(char *filename, contact *out);
 
 contact *readcard(char *filename, contact *c);
 

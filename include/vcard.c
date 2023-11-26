@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <dirent.h>
 #include "vcard.h"
 
 /** @brief Egy nevet inicializál, üres értékekkel tölti fel.
@@ -51,6 +52,10 @@ contact InitContact(contact empty){
     return empty;
 }
 
+/** @brief A struktúra address változóját egyben, stringként adja vissza.
+ * @returns A teljes cím egyetlen stringben
+ * @param n A kontakt neve
+ * */
 char *straddr(address *a){
     char *ret = (char*) malloc(sizeof(*a)+5*sizeof(char));
     char *attr[] = {
@@ -69,27 +74,47 @@ char *straddr(address *a){
     return ret;
 }
 
+/** @brief A struktúra fullname változóját egyben, stringként adja vissza.
+ * @returns A teljes név egyetlen stringben
+ * @param n A kontakt neve
+ * */
 char *strfn(fullname *n){
-    char *ret = (char*) malloc(sizeof(*n));
+    size_t total_length = strlen(n->prefix) + strlen(n->first) + strlen(n->middle) + strlen(n->last) + strlen(n->suffix) + 5;
+    char *ret = (char*) malloc(total_length * sizeof(char));
     char *attr[] = {
             n->prefix,
             n->first,
             n->middle,
             n->last,
-            n->suffix
+            n->suffix,
+            NULL
     };
-    for(int i=0; i<5; i++) if(attr[i][0] != '\0') sprintf(ret, "%s %s", ret, attr[i]);
+    ret[0] = '\0';
+    for (int i = 0; i < 5; i++)
+        if (attr[i] != NULL && strcmp(attr[i], "") != 0){
+            if(ret[0] != '\0') strcat(ret, " ");
+            strcat(ret, attr[i]);
+        }
     return ret;
 }
+
 
 /** @brief A paraméterként megadott contact típusú változó adatait vCard kiterjesztésű fájlba írja.
  * @param filename Kimenő fájl neve
  * @param out A kiírandó contact típusú változó
  * @todo hibakezelés
 */
-void writecard(char *filename, contact *out){
-    sprintf(filename, "cards/%s.vcard", filename);
-    FILE *fp = fopen(filename, "w");
+int writecard(char *filename, contact *out){
+    char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
+    sprintf(path, "cards/%s.vcf", filename);
+    FILE *fp = fopen(path, "w");
+    if (fp == NULL) {
+        free(path);
+        printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
+        return -1;
+    }
+    free(path);
+
     fprintf(fp, "BEGIN:VCARD\nVERSION:4.0\n");
     fprintf(fp, "FN:%s\n", out->fn);
     fprintf(fp, "N:%s;%s;%s;%s;%s\n", out->name.last, out->name.first, out->name.middle, out->name.prefix, out->name.suffix);
@@ -99,14 +124,19 @@ void writecard(char *filename, contact *out){
     fprintf(fp, "EMAIL:%s\n", out->email);
     fprintf(fp, "NOTE:%s\n", out->note);
     fprintf(fp, "END:VCARD");
+    return 0;
 }
 
 contact *readcard(char *filename, contact *c) {
-    FILE *file = fopen(filename, "r");
+    char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
+    sprintf(path, "cards/%s", filename);
+    FILE *file = fopen(path, "r");
     if (file == NULL) {
-        printf("Nem sikerült megnyitni a fájlt: %s\n", filename);
-        return;
+        free(path);
+        printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
+        return NULL;
     }
+    free(path);
 
     char line[512];
     while (fgets(line, sizeof(line), file)) {
@@ -137,6 +167,6 @@ contact *readcard(char *filename, contact *c) {
         }
     }
     fclose(file);
-    printf("\nSikeres beolvasás.\n");
+    printf("Sikeres beolvasás.\n");
     return c;
 }

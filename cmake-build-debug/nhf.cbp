@@ -18,8 +18,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="nhf">
-				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/nhf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"/>
+				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -37,8 +37,8 @@
 				</MakeCommands>
 			</Target>
 			<Target title="nhf/fast">
-				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/nhf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"/>
+				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -76,9 +76,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/func_test.c">
-			<Option target="nhf"/>
-		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h">
 			<Option target="nhf"/>
 		</Unit>
@@ -98,6 +95,9 @@
 			<Option target="nhf"/>
 		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h">
+			<Option target="nhf"/>
+		</Unit>
+		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c">
 			<Option target="nhf"/>
 		</Unit>
 		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/CMakeLists.txt">
