@@ -68,6 +68,12 @@ void olvas(char *s, size_t len) {
     s[i] = '\0';
 }
 
+void olvas1(char *s, size_t len) {
+    //printf("Enter a string: ");
+    fgets(s, len, stdin);
+    s[strcspn(s, "\n")] = 0; // remove trailing newline
+}
+
 /** @brief Kiírja az argumentumként megadott lista elemeit számozva, külön-külön sorba.
  *  A felhasználó megadhatja a szabványos bemeneten az általa választott opció sorszámát.
  * @param lista Lista, amely tartalmazza a kiírandó opciókat.
@@ -89,8 +95,11 @@ char *beker(const char *prompt, char* dest, size_t size){
     //while ((getchar()) != '\n');
     clear();
     printf("%s:\t\t(max. %lu karakter)\n", prompt, size-1);
+    //while ((getchar()) != '\n');
     olvas(dest, size);
     //while ((getchar()) != '\n');
+    //debug
+    printf("beolvasva: \"%s\"\n", dest);
     return dest;
 }
 

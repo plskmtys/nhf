@@ -10,7 +10,7 @@
 #include "include/lista.h"
 #include <string.h>
 
-int main(int argc, char **argv){
+int main(){
     #ifdef _WIN32
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
@@ -19,6 +19,7 @@ int main(int argc, char **argv){
     printf("\n----TELEFONKÖNYV----\nvezérlés:\n-az adott menübe lépéshez adja meg a sorszámát. ha kész, ENTER.\n-kilépés: 'x'\n-visszalépés: 'b'\n");
 
     ListaElem *elso = NULL;
+    //elso = import_all(elso);
     char next = '0';
     while(next != 'x'){
         printf("\n----FŐMENÜ----\n");
@@ -46,13 +47,16 @@ int main(int argc, char **argv){
             //search
             case '3': {
                 /*code for search*/
-                clear();
                 char needle[256];
-                beker("keresett kifejezés: ", needle, sizeof(needle));
-                ListaElem *results_eleje = keres(elso, needle);
-                lista_kiir_short(results_eleje);
-                //clear();
+                clear();
+                beker("keresett kifejezés", needle, sizeof(needle));
 
+                ListaElem *results_eleje = NULL;
+                results_eleje = keres(elso, needle);
+
+                lista_kiir_short(results_eleje);
+                next = menukiir(view_options);
+                clear();
                 break;
             }
 
@@ -68,7 +72,7 @@ int main(int argc, char **argv){
                 //clear();
                 break;
             }
-
+            //import
             case '5':{
                 elso = import_all(elso);
                 break;

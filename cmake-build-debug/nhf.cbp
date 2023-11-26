@@ -8,99 +8,99 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"/>
+				<Option working_dir="/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="nhf">
-				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"/>
+				<Option output="/home/matyas/sata/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matyas/sata/code/prog1/nhf/nhf"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/."/>
+					<Add directory="/home/matyas/sata/code/prog1/nhf/nhf/."/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 nhf"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 nhf"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="nhf/fast">
-				<Option output="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"/>
+				<Option output="/home/matyas/sata/code/prog1/nhf/nhf/nhf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/matyas/sata/code/prog1/nhf/nhf"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/."/>
+					<Add directory="/home/matyas/sata/code/prog1/nhf/nhf/."/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/13/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 nhf/fast"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 nhf/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"/>
+				<Option working_dir="/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"/>
+				<Option working_dir="/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j4 -f &quot;/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/debugmalloc.h">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/debugmalloc.h">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.c">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/lista.c">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/lista.h">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/lista.h">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.c">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/menu.c">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/menu.h">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/menu.h">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.c">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/include/vcard.h">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/include/vcard.h">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/main.c">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/main.c">
 			<Option target="nhf"/>
 		</Unit>
-		<Unit filename="/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/CMakeLists.txt">
+		<Unit filename="/home/matyas/sata/code/prog1/nhf/nhf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

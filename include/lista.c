@@ -5,6 +5,7 @@
 #include "vcard.h"
 #include "debugmalloc.h"
 #include "lista.h"
+#include "menu.h"
 
 int listahossz(ListaElem *elso){
     ListaElem *eleje = elso;
@@ -36,7 +37,7 @@ ListaElem *GetLastItem(ListaElem *eleje){
     {
         if(last->next  == NULL) return last; 
     }
-    return NULL;
+    return eleje;
 }
 
 ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
@@ -51,10 +52,7 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
         vege->next = uj;
         vege = uj;
     }
-    return eleje;/** @brief A név részeit a struktúra fullname változójába másolja be.
- * @returns Teljes név egyetlen stringben
- * @param n A kontakt neve
- * */
+    return eleje;
 }
 
 /** @brief Megkeres egy kifejezést az adatbázisban, és visszaad egy listát az összes olyan kontakttal, ami tartalmazza a keresett kifejezést valamilyen mezőben.
@@ -67,10 +65,10 @@ ListaElem *keres(ListaElem *eleje, char *needle){
     ListaElem *ret = NULL;
     char *datastr;
     for (iter = eleje; iter != NULL; iter=iter->next) {
-        datastr = (char *) malloc(sizeof(*iter) + sizeof(char) * 6);
-        sprintf(datastr, "%s %s %s %s %s %s\n", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
-                iter->adat.email, iter->adat.org, iter->adat.title);
-        if (strstr(datastr, needle) != NULL) vegere_beszur(ret, iter->adat);
+        datastr = (char *) malloc(sizeof(*iter) + sizeof(char) * 60);
+        sprintf(datastr, "%s %s %s %s %s %s%c", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
+                iter->adat.email, iter->adat.org, iter->adat.title, '\0');
+        if (strstr(datastr, needle) != NULL) ret = vegere_beszur(ret, iter->adat);
         free(datastr);
     }
     return ret;
@@ -113,6 +111,8 @@ void lista_kiir_short(ListaElem *eleje){
     }
 }
 
+/** @brief Az összes kártyát imprtálja a /cards mappából.
+*/
 ListaElem *import_all(ListaElem *eleje) {
     DIR *d;
     struct dirent *dir;
@@ -132,11 +132,10 @@ ListaElem *import_all(ListaElem *eleje) {
                 contact c;
                 InitContact(c);
                 readcard(dir->d_name, &c);
-                vegere_beszur(eleje, c);
+                eleje = vegere_beszur(eleje, c);
             }
         }
         closedir(d);
     }
-
     return eleje;
 }

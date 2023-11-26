@@ -108,12 +108,11 @@ int writecard(char *filename, contact *out){
     char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
     sprintf(path, "cards/%s.vcf", filename);
     FILE *fp = fopen(path, "w");
+    free(path);
     if (fp == NULL) {
-        free(path);
         printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
         return -1;
     }
-    free(path);
 
     fprintf(fp, "BEGIN:VCARD\nVERSION:4.0\n");
     fprintf(fp, "FN:%s\n", out->fn);
@@ -131,20 +130,17 @@ contact *readcard(char *filename, contact *c) {
     char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
     sprintf(path, "cards/%s", filename);
     FILE *file = fopen(path, "r");
+    free(path);
     if (file == NULL) {
-        free(path);
         printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
         return NULL;
     }
-    free(path);
-
     char line[512];
     while (fgets(line, sizeof(line), file)) {
         char *value = strchr(line, ':');
         if (value != NULL) {
             *value = '\0';
             value++;
-
             if (strcmp(line, "FN") == 0) {
                 value[strcspn(value, "\n")] = 0;
                 strncpy(c->fn, value, sizeof(c->fn));

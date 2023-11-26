@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf"
-  "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/nhf.pdb"
+  "/home/matyas/sata/code/prog1/nhf/nhf/nhf"
+  "/home/matyas/sata/code/prog1/nhf/nhf/nhf.pdb"
   "CMakeFiles/nhf.dir/include/lista.c.o"
   "CMakeFiles/nhf.dir/include/lista.c.o.d"
   "CMakeFiles/nhf.dir/include/menu.c.o"

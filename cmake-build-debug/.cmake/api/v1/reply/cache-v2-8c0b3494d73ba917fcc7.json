@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"
+			"value" : "/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -187,10 +187,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "No help, variable specified on the command line."
+					"value" : "C compiler"
 				}
 			],
-			"type" : "UNINITIALIZED",
+			"type" : "STRING",
 			"value" : "/bin/gcc"
 		},
 		{
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -535,7 +535,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"
+			"value" : "/home/matyas/sata/code/prog1/nhf/nhf"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1115,7 +1115,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf/cmake-build-debug"
+			"value" : "/home/matyas/sata/code/prog1/nhf/nhf/cmake-build-debug"
 		},
 		{
 			"name" : "nhf_IS_TOP_LEVEL",
@@ -1139,7 +1139,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/matyas/Linuxfiles/code/prog1/nhf/nhf"
+			"value" : "/home/matyas/sata/code/prog1/nhf/nhf"
 		}
 	],
 	"kind" : "cache",
