@@ -9,9 +9,9 @@
 /** @brief Teljes név tárolására használt struktúra.*/
 typedef struct fullname{
     char prefix[16];
-    char first[128];
-    char middle[128];
-    char last[128];
+    char first[96];
+    char middle[96];
+    char last[96];
     char suffix[16];
 }fullname;
 
@@ -20,22 +20,22 @@ typedef struct address{
     //char type[64];
     char zip[16];
     char street_no[128];
-    char city[128];
-    char country[128];
-    char county[128];
+    char city[96];
+    char country[96];
+    char county[96];
 }address;
 
 /** @brief Egy kontakt összes adatának tárolására használt struktúra.*/
 typedef struct contact{
     char phone[20];
-    char fn[420];
+    char fn[324];
     fullname name;
     char email[256];
     address address;
     char bday[9];
-    char note[512];
-    char org[128];
-    char title[128];
+    char note[256];
+    char org[96];
+    char title[96];
 }contact;
 
 fullname InitName(fullname empty);

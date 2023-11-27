@@ -15,11 +15,10 @@ int main(){
         SetConsoleCP(1250);
         SetConsoleOutputCP(1250);
     #endif
-    //clear();
     printf("\n----TELEFONKÖNYV----\nvezérlés:\n-az adott menübe lépéshez adja meg a sorszámát. ha kész, ENTER.\n-kilépés: 'x'\n-visszalépés: 'b'\n");
 
     ListaElem *elso = NULL;
-    //elso = import_all(elso);
+    elso = import_all(elso);
     char next = '0';
     while(next != 'x'){
         printf("\n----FŐMENÜ----\n");
@@ -40,7 +39,8 @@ int main(){
             case '2': {
                 clear();
                 lista_kiir_short(elso);
-                next = menukiir(view_options);
+                scanf(" %c");
+                while ((getchar()) != '\n');
                 clear();
                 break;
             }
@@ -49,19 +49,29 @@ int main(){
                 /*code for search*/
                 char needle[256];
                 clear();
-                beker("keresett kifejezés", needle, sizeof(needle));
+                beker_keres("keresett kifejezés", needle, sizeof(needle));
 
                 ListaElem *results_eleje = NULL;
                 results_eleje = keres(elso, needle);
 
-                lista_kiir_short(results_eleje);
-                next = menukiir(view_options);
+                while (next != 'b' && next != 'x') {
+                    lista_kiir_short(results_eleje);
+                    int n = 0;
+                    printf("melyiket szeretnéd megtekinteni/szerkeszteni?\n");
+                    scanf(" %d", &n);
+
+                    edit_contact(&nth(results_eleje, n)->adat, &next);
+                }
+
+                next = '0';
+                lista_free(results_eleje);
                 clear();
                 break;
             }
 
             //export
             case '4': {
+                clear();
                 for(ListaElem *iter = elso; iter != NULL; iter = iter->next){
                     if(writecard(iter->adat.fn, &iter->adat)){
                         printf("sikertelen export: %s\n", iter->adat.fn);
@@ -74,6 +84,7 @@ int main(){
             }
             //import
             case '5':{
+                clear();
                 elso = import_all(elso);
                 break;
             }

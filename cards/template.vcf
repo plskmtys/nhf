@@ -6,4 +6,7 @@ TEL:00017738996071
 ADR;TYPE=home:;;47 Irinyi József u.;Budapest;Pest;1117;Hungary
 BDAY:YYYYMMDD
 EMAIL:user@domain.hu
+ORG:organisation
+TITLE:job title
+NOTE:this is where notes go
 END:VCARD

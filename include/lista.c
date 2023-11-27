@@ -7,6 +7,9 @@
 #include "lista.h"
 #include "menu.h"
 
+/** @brief Láncolt lista hosszát számolja meg, laborhoz használt függvény átalakított verziója.
+ * @param eleje A lista eleje.
+*/
 int listahossz(ListaElem *elso){
     ListaElem *eleje = elso;
     int hossz=0;
@@ -14,6 +17,9 @@ int listahossz(ListaElem *elso){
     return hossz;
 }
 
+/** @brief Láncolt listát szabadít fel, laborhoz használt függvény átalakított verziója.
+ * @param eleje A lista eleje.
+*/
 void lista_free(ListaElem *eleje){
     ListaElem *iter = eleje;
     while (iter != NULL) {
@@ -23,6 +29,10 @@ void lista_free(ListaElem *eleje){
     }
 }
 
+/** @brief Láncolt lista elejére szúr be adatot, laborhoz használt függvény átalakított verziója.
+ * @param eleje A lista eleje.
+ * @param adat A beszúrandó adat.
+*/
 ListaElem *elore_beszur(ListaElem *eleje, contact adat) {
    ListaElem *uj;
    uj = (ListaElem*) malloc(sizeof(ListaElem));
@@ -31,6 +41,9 @@ ListaElem *elore_beszur(ListaElem *eleje, contact adat) {
    return uj;
 }
 
+/** @brief Láncolt lista utolsó elemét keresi meg, laborhoz használt függvény átalakított verziója.
+ * @param eleje A lista eleje.
+*/
 ListaElem *GetLastItem(ListaElem *eleje){
     ListaElem *last;
     for (last = eleje; ; last=last->next)
@@ -40,6 +53,10 @@ ListaElem *GetLastItem(ListaElem *eleje){
     return eleje;
 }
 
+/** @brief Láncolt lista végére szúr be adatot, laborhoz használt függvény átalakított verziója.
+ * @param eleje A lista eleje.
+ * @param adat A beszúrandó adat.
+*/
 ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
     ListaElem *uj;
     uj = (ListaElem*) malloc(sizeof(ListaElem));
@@ -74,6 +91,11 @@ ListaElem *keres(ListaElem *eleje, char *needle){
     return ret;
 }
 
+/** @brief Dinamikus memórával egy hosszú sort beolvasó függvény. A program végül nem használja, a sok realloc helyett hatékonyabb 
+ * a tipikusnál nem sokkal nagyobb (vagy szabványos adatok, pl. irányítószám esetén a szabvány által meghatározott maximális méretű) 
+ * terület foglalása.
+ * @returns Dinamikusan foglalt string
+*/
 char* sor_olvas() {
     size_t bufsize = 32;
     size_t position = 0;
@@ -103,6 +125,9 @@ char* sor_olvas() {
     }
 }
 
+/** @brief Kiírja egy kontaktokból álló láncolt lista elemeinek nevét és telefonszámukat.
+ * @param eleje A lista eleje.
+*/
 void lista_kiir_short(ListaElem *eleje){
     ListaElem *iter;
     int i = 1;
@@ -111,7 +136,8 @@ void lista_kiir_short(ListaElem *eleje){
     }
 }
 
-/** @brief Az összes kártyát imprtálja a /cards mappából.
+/** @brief Az összes kártyát importálja a /cards mappából.
+ * @param eleje A lista eleje, amibe beilleszti az elemeket.
 */
 ListaElem *import_all(ListaElem *eleje) {
     DIR *d;
@@ -128,7 +154,7 @@ ListaElem *import_all(ListaElem *eleje) {
         while ((dir = readdir(d)) != NULL) {
             snprintf(filepath, sizeof(filepath), "cards/%s", dir->d_name);  // construct the full path
             if(stat(filepath, &path_stat) == 0 && S_ISREG(path_stat.st_mode)) {
-                printf("importálás: %s\n", dir->d_name);
+                //printf("importálás: %s\n", dir->d_name);
                 contact c;
                 InitContact(c);
                 readcard(dir->d_name, &c);
@@ -138,4 +164,18 @@ ListaElem *import_all(ListaElem *eleje) {
         closedir(d);
     }
     return eleje;
+}
+
+/** @brief Egy láncolt lista n-edik elemét keresi meg és adja vissza. Túlindexeléskor figyelmeztet és NULL pointert ad vissza.
+ * @param eleje A lista eleje
+ * @param n Hányadik elemet adja vissza
+ * @returns A lista n-edik eleme
+*/
+ListaElem *nth(ListaElem *eleje, size_t n){
+    size_t i = 0;
+    for(ListaElem *iter = eleje; iter != NULL; iter = iter->next){
+        if(n-1 == i++) return iter;
+    }
+    printf("túlindexelted a listát!\n");
+    return NULL;
 }

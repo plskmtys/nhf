@@ -7,7 +7,6 @@
 /** @brief Egy nevet inicializál, üres értékekkel tölti fel.
  *  @returns Üres értékekkel feltöltött, fullname típusú változó.
 */
-
 fullname InitName(fullname empty){
     empty.first[0] = '\0';
     empty.last[0] = '\0';
@@ -21,7 +20,6 @@ fullname InitName(fullname empty){
 /** @brief Egy címet inicializál, üres értékekkel tölti fel.
  *  @returns Üres értékekkel feltöltött, address típusú változó.
 */
-
 address InitAddress(address empty){
     empty.street_no[0] = '\0';
     empty.city[0] = '\0';
@@ -36,7 +34,6 @@ address InitAddress(address empty){
 /** @brief Egy kontaktot inicializál, üres értékekkel tölti fel.
  * @returns Üres értékekkel feltöltött, contact típusú változó.
 */
-
 contact InitContact(contact empty){
     empty.phone[0]='\0';
     empty.fn[0] = '\0';
@@ -55,7 +52,7 @@ contact InitContact(contact empty){
 /** @brief A struktúra address változóját egyben, stringként adja vissza.
  * @returns A teljes cím egyetlen stringben
  * @param n A kontakt neve
- * */
+*/
 char *straddr(address *a){
     char *ret = (char*) malloc(sizeof(*a)+5*sizeof(char));
     char *attr[] = {
@@ -77,7 +74,7 @@ char *straddr(address *a){
 /** @brief A struktúra fullname változóját egyben, stringként adja vissza.
  * @returns A teljes név egyetlen stringben
  * @param n A kontakt neve
- * */
+*/
 char *strfn(fullname *n){
     size_t total_length = strlen(n->prefix) + strlen(n->first) + strlen(n->middle) + strlen(n->last) + strlen(n->suffix) + 5;
     char *ret = (char*) malloc(total_length * sizeof(char));
@@ -102,7 +99,6 @@ char *strfn(fullname *n){
 /** @brief A paraméterként megadott contact típusú változó adatait vCard kiterjesztésű fájlba írja.
  * @param filename Kimenő fájl neve
  * @param out A kiírandó contact típusú változó
- * @todo hibakezelés
 */
 int writecard(char *filename, contact *out){
     char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
@@ -126,7 +122,16 @@ int writecard(char *filename, contact *out){
     return 0;
 }
 
+/** @brief A paraméterként megadott contact típusú változóba másolja be a vCard kiterjesztésű fájl adatait.
+ * @param filename Olvasandó fájl neve.
+ * @param out A contact típusú változó, amibe írunk.
+*/
 contact *readcard(char *filename, contact *c) {
+    if(c == NULL){
+        printf("a cél struktúra nem létezik.\n");
+        return NULL;
+    }
+    *c = InitContact(*c);
     char *path = (char*) malloc(sizeof(char)*(strlen(filename)+11));
     sprintf(path, "cards/%s", filename);
     FILE *file = fopen(path, "r");
@@ -159,10 +164,19 @@ contact *readcard(char *filename, contact *c) {
             } else if (strcmp(line, "EMAIL") == 0) {
                 value[strcspn(value, "\n")] = 0;
                 strncpy(c->email, value, sizeof(c->email));
+            } else if (strcmp(line, "ORG") == 0) {
+                value[strcspn(value, "\n")] = 0;
+                strncpy(c->org, value, sizeof(c->org));
+            } else if (strcmp(line, "TITLE") == 0) {
+                value[strcspn(value, "\n")] = 0;
+                strncpy(c->title, value, sizeof(c->title));
+            } else if (strcmp(line, "NOTE") == 0) {
+                value[strcspn(value, "\n")] = 0;
+                strncpy(c->note, value, sizeof(c->note));
             }
         }
     }
     fclose(file);
-    printf("Sikeres beolvasás.\n");
+    //printf("Sikeres beolvasás.\n");
     return c;
 }

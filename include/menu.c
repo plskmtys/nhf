@@ -1,4 +1,3 @@
-// MALTEROS LAPÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁT
 #include <stdio.h>
 #include "menu.h"
 #include "vcard.h"
@@ -61,17 +60,15 @@ const char *address_options[] = {
     "ország"
 };
 
+/** @brief Egy egyszerűbb, buffer overflow mentes scanf, csakis stringekhez.
+ * @param s A string amibe olvasunk.
+ * @param len A string maximális hossza.
+*/
 void olvas(char *s, size_t len) {
     int ch;
     size_t i = 0;
     while ((ch = fgetc(stdin)) != '\n' && ch != EOF) if (i < len - 1) s[i++] = ch;
     s[i] = '\0';
-}
-
-void olvas1(char *s, size_t len) {
-    //printf("Enter a string: ");
-    fgets(s, len, stdin);
-    s[strcspn(s, "\n")] = 0; // remove trailing newline
 }
 
 /** @brief Kiírja az argumentumként megadott lista elemeit számozva, külön-külön sorba.
@@ -92,14 +89,21 @@ char menukiir(const char **lista){
  * @returns Visszatér a felhasználótól bekért karakterrel.
 */ 
 char *beker(const char *prompt, char* dest, size_t size){
-    //while ((getchar()) != '\n');
     clear();
     printf("%s:\t\t(max. %lu karakter)\n", prompt, size-1);
-    //while ((getchar()) != '\n');
     olvas(dest, size);
-    //while ((getchar()) != '\n');
     //debug
-    printf("beolvasva: \"%s\"\n", dest);
+    //printf("beolvasva: \"%s\"\n", dest);
+    return dest;
+}
+
+char *beker_keres(const char *prompt, char* dest, size_t size){
+    while ((getchar()) != '\n');
+    clear();
+    printf("%s:\t\t(max. %lu karakter)\n", prompt, size-1);
+    olvas(dest, size);
+    //debug
+    //printf("beolvasva: \"%s\"\n", dest);
     return dest;
 }
 
@@ -150,6 +154,11 @@ void clear(){
     printf("\e[1;1H\e[2J");
 }
 
+/** @brief Ez a függvény egy kontakt szerkesztését teszi lehetővé.
+ * @param c A kontakt amit szerkeszt.
+ * @param next Miután visszatér a függvény, kilépjen-e a szerkesztésből vagy sem.
+ * @returns A módosított kontakt struktúra.
+*/
 contact* edit_contact(contact *c, char *next){
     clear();
     //next = menukiir(newc_options);
@@ -249,4 +258,13 @@ contact* edit_contact(contact *c, char *next){
             break;
     }
     return c;
+}
+
+char contextmenu(contact *c){
+    char choice;
+    char *attr[] = {c->name.prefix, c->name.first, c->name.middle, c->name.last, c->name.suffix, NULL};
+    for(int i=0; attr[i] != NULL; i++) printf("(%d) %s:  %s\n", i+1, name_options[i], attr[i]);
+    scanf(" %c", &choice);
+    while ((getchar()) != '\n');
+    return choice;
 }

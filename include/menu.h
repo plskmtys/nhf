@@ -23,6 +23,8 @@ char menukiir(const char **lista);
 
 char *beker(const char *prompt, char *dest, size_t size);
 
+char *beker_keres(const char *prompt, char *dest, size_t size);
+
 char contactmenu(contact *c);
 
 char namemenu(contact *c);

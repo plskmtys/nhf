@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NHF: /home/matyas/sata/code/prog1/nhf/nhf/include/lista.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">NHF<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Telefonkönyv</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Keresés');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Betöltés...</div>
+<div class="SRStatus" id="Searching">Keresés...</div>
+<div class="SRStatus" id="NoMatches">Nincs egyezés</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_33a9904b6a75bad7ec067ed79bd603ea.html">sata</a></li><li class="navelem"><a class="el" href="dir_d11d761de7e99d0d3bb69b4d5056f7dc.html">code</a></li><li class="navelem"><a class="el" href="dir_e4656ef443cb7a1f1ff66535997e2a3a.html">prog1</a></li><li class="navelem"><a class="el" href="dir_9c36e887facef04122c63ee22321abb8.html">nhf</a></li><li class="navelem"><a class="el" href="dir_f56cfa86201c79eca889af220c837190.html">nhf</a></li><li class="navelem"><a class="el" href="dir_be02c7aff00133920f36ad32f1c4160a.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">lista.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8h.html">Ugrás a fájl dokumentációjához.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="vcard_8h.html">vcard.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifndef NHF_LISTA_H</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define NHF_LISTA_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structListaElem.html">   11</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structListaElem.html">ListaElem</a>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structListaElem.html#af479a8f00ccfdf4c1739b4314ec2f7a9">   12</a></span>    <a class="code hl_struct" href="structcontact.html">contact</a> <a class="code hl_variable" href="structListaElem.html#af479a8f00ccfdf4c1739b4314ec2f7a9">adat</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structListaElem.html#adaf8d19e14207ecc2f0f3f53631f2210">   13</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_variable" href="structListaElem.html#adaf8d19e14207ecc2f0f3f53631f2210">next</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="lista_8h.html#aecc7aa80a85efb3789bb0888e9fe4c78">   14</a></span>}<a class="code hl_struct" href="structListaElem.html">ListaElem</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> <a class="code hl_function" href="lista_8h.html#a1c404904f585cbf4edbc2c8f45337cd9">listahossz</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a7beabb037cf9b023775f4c61d4f5c569">lista_free</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#a31bda40c7ed5666c71d25ee7f0698b23">elore_beszur</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje, <a class="code hl_struct" href="structcontact.html">contact</a> <a class="code hl_variable" href="structListaElem.html#af479a8f00ccfdf4c1739b4314ec2f7a9">adat</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#ad6ebb9c0b839999e94c03db03ad3aa1a">GetLastItem</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#ac8cc37a60e3a1922a36ab2713c8b9dbf">vegere_beszur</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *elso, <a class="code hl_struct" href="structcontact.html">contact</a> uj);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#a30b9f80ee8e039c47b3b35d422341bc4">keres</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje, <span class="keywordtype">char</span> *keresett);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">char</span> *<a class="code hl_function" href="lista_8h.html#af87bbaf8085626b08bc86e6527426be8">sor_olvas</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> <a class="code hl_function" href="lista_8h.html#a6d5161ffd4605fe903671277fbd1b9a7">lista_kiir_short</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#a0578dd7469b833b2b77a71319d35f07b">import_all</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><a class="code hl_struct" href="structListaElem.html">ListaElem</a> *<a class="code hl_function" href="lista_8h.html#ac128b6331a52f48cae150c3db80b217a">nth</a>(<a class="code hl_struct" href="structListaElem.html">ListaElem</a> *eleje, <span class="keywordtype">size_t</span> n);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">//NHF_LISTA_H</span></div>
+<div class="ttc" id="alista_8h_html_a0578dd7469b833b2b77a71319d35f07b"><div class="ttname"><a href="lista_8h.html#a0578dd7469b833b2b77a71319d35f07b">import_all</a></div><div class="ttdeci">ListaElem * import_all(ListaElem *eleje)</div><div class="ttdoc">Az összes kártyát importálja a /cards mappából.</div><div class="ttdef"><b>Definition</b> lista.c:142</div></div>
+<div class="ttc" id="alista_8h_html_a1c404904f585cbf4edbc2c8f45337cd9"><div class="ttname"><a href="lista_8h.html#a1c404904f585cbf4edbc2c8f45337cd9">listahossz</a></div><div class="ttdeci">int listahossz(ListaElem *eleje)</div><div class="ttdoc">Láncolt lista hosszát számolja meg, laborhoz használt függvény átalakított verziója.</div><div class="ttdef"><b>Definition</b> lista.c:13</div></div>
+<div class="ttc" id="alista_8h_html_a30b9f80ee8e039c47b3b35d422341bc4"><div class="ttname"><a href="lista_8h.html#a30b9f80ee8e039c47b3b35d422341bc4">keres</a></div><div class="ttdeci">ListaElem * keres(ListaElem *eleje, char *keresett)</div><div class="ttdoc">Megkeres egy kifejezést az adatbázisban, és visszaad egy listát az összes olyan kontakttal,...</div><div class="ttdef"><b>Definition</b> lista.c:80</div></div>
+<div class="ttc" id="alista_8h_html_a31bda40c7ed5666c71d25ee7f0698b23"><div class="ttname"><a href="lista_8h.html#a31bda40c7ed5666c71d25ee7f0698b23">elore_beszur</a></div><div class="ttdeci">ListaElem * elore_beszur(ListaElem *eleje, contact adat)</div><div class="ttdoc">Láncolt lista elejére szúr be adatot, laborhoz használt függvény átalakított verziója.</div><div class="ttdef"><b>Definition</b> lista.c:36</div></div>
+<div class="ttc" id="alista_8h_html_a6d5161ffd4605fe903671277fbd1b9a7"><div class="ttname"><a href="lista_8h.html#a6d5161ffd4605fe903671277fbd1b9a7">lista_kiir_short</a></div><div class="ttdeci">void lista_kiir_short(ListaElem *eleje)</div><div class="ttdoc">Kiírja egy kontaktokból álló láncolt lista elemeinek nevét és telefonszámukat.</div><div class="ttdef"><b>Definition</b> lista.c:131</div></div>
+<div class="ttc" id="alista_8h_html_a7beabb037cf9b023775f4c61d4f5c569"><div class="ttname"><a href="lista_8h.html#a7beabb037cf9b023775f4c61d4f5c569">lista_free</a></div><div class="ttdeci">void lista_free(ListaElem *eleje)</div><div class="ttdoc">Láncolt listát szabadít fel, laborhoz használt függvény átalakított verziója.</div><div class="ttdef"><b>Definition</b> lista.c:23</div></div>
+<div class="ttc" id="alista_8h_html_ac128b6331a52f48cae150c3db80b217a"><div class="ttname"><a href="lista_8h.html#ac128b6331a52f48cae150c3db80b217a">nth</a></div><div class="ttdeci">ListaElem * nth(ListaElem *eleje, size_t n)</div><div class="ttdoc">Egy láncolt lista n-edik elemét keresi meg és adja vissza.</div><div class="ttdef"><b>Definition</b> lista.c:174</div></div>
+<div class="ttc" id="alista_8h_html_ac8cc37a60e3a1922a36ab2713c8b9dbf"><div class="ttname"><a href="lista_8h.html#ac8cc37a60e3a1922a36ab2713c8b9dbf">vegere_beszur</a></div><div class="ttdeci">ListaElem * vegere_beszur(ListaElem *elso, contact uj)</div><div class="ttdoc">Láncolt lista végére szúr be adatot, laborhoz használt függvény átalakított verziója.</div><div class="ttdef"><b>Definition</b> lista.c:60</div></div>
+<div class="ttc" id="alista_8h_html_ad6ebb9c0b839999e94c03db03ad3aa1a"><div class="ttname"><a href="lista_8h.html#ad6ebb9c0b839999e94c03db03ad3aa1a">GetLastItem</a></div><div class="ttdeci">ListaElem * GetLastItem(ListaElem *eleje)</div><div class="ttdoc">Láncolt lista utolsó elemét keresi meg, laborhoz használt függvény átalakított verziója.</div><div class="ttdef"><b>Definition</b> lista.c:47</div></div>
+<div class="ttc" id="alista_8h_html_af87bbaf8085626b08bc86e6527426be8"><div class="ttname"><a href="lista_8h.html#af87bbaf8085626b08bc86e6527426be8">sor_olvas</a></div><div class="ttdeci">char * sor_olvas()</div><div class="ttdoc">Dinamikus memórával egy hosszú sort beolvasó függvény.</div><div class="ttdef"><b>Definition</b> lista.c:99</div></div>
+<div class="ttc" id="astructListaElem_html"><div class="ttname"><a href="structListaElem.html">ListaElem</a></div><div class="ttdoc">A láncolt lista egy eleme.</div><div class="ttdef"><b>Definition</b> lista.h:11</div></div>
+<div class="ttc" id="astructListaElem_html_adaf8d19e14207ecc2f0f3f53631f2210"><div class="ttname"><a href="structListaElem.html#adaf8d19e14207ecc2f0f3f53631f2210">ListaElem::next</a></div><div class="ttdeci">struct ListaElem * next</div><div class="ttdef"><b>Definition</b> lista.h:13</div></div>
+<div class="ttc" id="astructListaElem_html_af479a8f00ccfdf4c1739b4314ec2f7a9"><div class="ttname"><a href="structListaElem.html#af479a8f00ccfdf4c1739b4314ec2f7a9">ListaElem::adat</a></div><div class="ttdeci">contact adat</div><div class="ttdef"><b>Definition</b> lista.h:12</div></div>
+<div class="ttc" id="astructcontact_html"><div class="ttname"><a href="structcontact.html">contact</a></div><div class="ttdoc">Egy kontakt összes adatának tárolására használt struktúra.</div><div class="ttdef"><b>Definition</b> vcard.h:29</div></div>
+<div class="ttc" id="avcard_8h_html"><div class="ttname"><a href="vcard_8h.html">vcard.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Készítette&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
