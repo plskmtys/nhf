@@ -13,6 +13,8 @@ typedef struct ListaElem{
     struct ListaElem *next;
 }ListaElem;
 
+void reset(char *next);
+
 int listahossz(ListaElem *eleje);
 
 void lista_free(ListaElem *eleje);

@@ -20,12 +20,12 @@ int listahossz(ListaElem *elso){
 /** @brief Láncolt listát szabadít fel, laborhoz használt függvény átalakított verziója.
  * @param eleje A lista eleje.
 */
-void lista_free(ListaElem *eleje){
-    ListaElem *iter = eleje;
-    while (iter != NULL) {
-        ListaElem *next = iter->next;
-        free(iter);
-        iter = next;
+void lista_free(ListaElem *eleje) {
+    ListaElem *p = eleje;
+    while (p != NULL) {
+        ListaElem *tmp = p->next;
+        free(p);
+        p = tmp;
     }
 }
 
@@ -55,21 +55,21 @@ ListaElem *GetLastItem(ListaElem *eleje){
 
 /** @brief Láncolt lista végére szúr be adatot, laborhoz használt függvény átalakított verziója.
  * @param eleje A lista eleje.
- * @param adat A beszúrandó adat.
+ * @param mit A beszúrandó adat.
 */
-ListaElem *vegere_beszur(ListaElem *eleje, contact adat){
-    ListaElem *uj;
-    uj = (ListaElem*) malloc(sizeof(ListaElem));
-    uj->adat = adat;
-    uj->next = NULL;
+ListaElem *vegere_beszur(ListaElem *eleje, contact mit) {
+    ListaElem *uj = (ListaElem *) malloc(sizeof(ListaElem)); /* Új elem */
+ 
+    uj->adat = mit; /* Adat bemásolása */
+    uj->next = NULL; /* Ez lesz a lista vége, ezért NULL a következő elem */
     if (eleje == NULL) {
-        eleje = uj;
+        return uj; /* Ha üres a lista, akkor ez lesz az eleje */
     } else {
-        ListaElem *vege = GetLastItem(eleje);
-        vege->next = uj;
-        vege = uj;
+        ListaElem *p = eleje; /* Elmegyünk az utolsó elemig (aminek a pointere NULL pointer) */
+        while (p->next != NULL) p = p->next;
+        p->next = uj; /* És hozzáfűzzük */
+        return eleje;
     }
-    return eleje;
 }
 
 /** @brief Megkeres egy kifejezést az adatbázisban, és visszaad egy listát az összes olyan kontakttal, ami tartalmazza a keresett kifejezést valamilyen mezőben.

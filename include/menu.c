@@ -60,6 +60,10 @@ const char *address_options[] = {
     "ország"
 };
 
+void reset(char *next){
+    *next = '0';
+}
+
 /** @brief Egy egyszerűbb, buffer overflow mentes scanf, csakis stringekhez.
  * @param s A string amibe olvasunk.
  * @param len A string maximális hossza.

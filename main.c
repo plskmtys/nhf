@@ -32,7 +32,7 @@ int main(){
                     edit_contact(&uj, &next);
                 }
                 elso = vegere_beszur(elso, uj);
-                next = '0';
+                reset(&next);
                 break;
             }
             //view all
@@ -46,7 +46,6 @@ int main(){
             }
             //search
             case '3': {
-                /*code for search*/
                 char needle[256];
                 clear();
                 beker_keres("keresett kifejezés", needle, sizeof(needle));
@@ -59,16 +58,17 @@ int main(){
                     int n = 0;
                     printf("melyiket szeretnéd megtekinteni/szerkeszteni?\n");
                     scanf(" %d", &n);
-
+                    if(nth(results_eleje, n) == NULL) {
+                        sleep(1);
+                        break;
+                    }
                     edit_contact(&nth(results_eleje, n)->adat, &next);
                 }
-
-                next = '0';
+                reset(&next);
                 lista_free(results_eleje);
                 clear();
                 break;
             }
-
             //export
             case '4': {
                 clear();
@@ -79,7 +79,6 @@ int main(){
                         printf("sikeres export: %s\n", iter->adat.fn);
                     }
                 }
-                //clear();
                 break;
             }
             //import
@@ -92,7 +91,9 @@ int main(){
                 clear();
                 break;
         }
+        clear();
     }
-    clear();
-    lista_free(elso);
+    if(elso != NULL){
+        lista_free(elso);
+    }
 }
