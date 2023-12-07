@@ -163,7 +163,8 @@ CMakeFiles/nhf.dir/include/menu.c.o: /home/matyas/sata/code/prog1/nhf/nhf/includ
   /usr/include/bits/confname.h \
   /usr/include/bits/getopt_posix.h \
   /usr/include/bits/getopt_core.h \
-  /usr/include/bits/unistd_ext.h
+  /usr/include/bits/unistd_ext.h \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/lista.h
 
 CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c \
   /usr/include/stdc-predef.h \
@@ -232,7 +233,18 @@ CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/inclu
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthread_stack_min.h \
   /usr/include/bits/dirent_ext.h \
-  /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.h
+  /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.h \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/menu.h \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/debugmalloc.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/stdbool.h \
+  /usr/include/ctype.h \
+  /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h \
+  /usr/include/bits/environments.h \
+  /usr/include/bits/confname.h \
+  /usr/include/bits/getopt_posix.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/unistd_ext.h
 
 CMakeFiles/nhf.dir/main.c.o: /home/matyas/sata/code/prog1/nhf/nhf/main.c \
   /usr/include/stdc-predef.h \

@@ -39,7 +39,24 @@ int main(){
             case '2': {
                 clear();
                 lista_kiir_short(elso);
-                scanf(" %c");
+                /*
+                next = getchar();
+                
+                clear();
+                    lista_kiir_short(elso);
+                    printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
+                    char n = 0;
+                    scanf(" %c", &n);
+                    clear();
+                    while(nth(elso, n-0x30) == NULL) {
+                        lista_kiir_short(elso);
+                        printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
+                        scanf(" %c", &n);
+                        clear();
+                    }
+                    edit_contact(&nth(elso, n-0x30)->adat, &next);
+
+                */
                 while ((getchar()) != '\n');
                 clear();
                 break;
@@ -52,20 +69,33 @@ int main(){
 
                 ListaElem *results_eleje = NULL;
                 results_eleje = keres(elso, needle);
-
+                if(results_eleje == NULL){
+                    printf("\nNincs találat.\nKilépés...\n");
+                    lista_free(results_eleje);
+                    reset(&next);
+                    sleep(1);
+                    clear();
+                    break;
+                }
                 while (next != 'b' && next != 'x') {
+                    char n = 0;
+                    clear();
+                    printf("Keresési eredmények a követezőre: %s\n\n", needle);
                     lista_kiir_short(results_eleje);
-                    int n = 0;
-                    printf("melyiket szeretnéd megtekinteni/szerkeszteni?\n");
-                    scanf(" %d", &n);
-                    if(nth(results_eleje, n) == NULL) {
-                        sleep(1);
-                        break;
+                    printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
+                    scanf(" %c", &n);
+                    clear();
+                    while(nth(results_eleje, n-0x30) == NULL) {
+                        printf("Keresési eredmények a követezőre: %s\n\n", needle);
+                        lista_kiir_short(results_eleje);
+                        printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
+                        scanf(" %c", &n);
+                        clear();
                     }
-                    edit_contact(&nth(results_eleje, n)->adat, &next);
+                    edit_contact(&nth(results_eleje, n-0x30)->adat, &next);
                 }
                 reset(&next);
-                lista_free(results_eleje);
+                lista_free(results_eleje); //problémás
                 clear();
                 break;
             }

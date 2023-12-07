@@ -3,6 +3,7 @@
 #include <string.h>
 #include <dirent.h>
 #include "vcard.h"
+#include "menu.h"
 
 /** @brief Egy nevet inicializál, üres értékekkel tölti fel.
  *  @returns Üres értékekkel feltöltött, fullname típusú változó.
@@ -106,7 +107,7 @@ int writecard(char *filename, contact *out){
     FILE *fp = fopen(path, "w");
     free(path);
     if (fp == NULL) {
-        printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
+        printerror("nem sikerült megnyitni a fájlt.");
         return -1;
     }
 
@@ -128,7 +129,7 @@ int writecard(char *filename, contact *out){
 */
 contact *readcard(char *filename, contact *c) {
     if(c == NULL){
-        printf("a cél struktúra nem létezik.\n");
+        printerror("a cél struktúra nem létezik.\n");
         return NULL;
     }
     *c = InitContact(*c);
@@ -137,7 +138,7 @@ contact *readcard(char *filename, contact *c) {
     FILE *file = fopen(path, "r");
     free(path);
     if (file == NULL) {
-        printf("nem sikerült megnyitni a %s nevű fájlt.\n", filename);
+        printerror("nem sikerült megnyitni a fájlt.");
         return NULL;
     }
     char line[512];

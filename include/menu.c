@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "menu.h"
 #include "vcard.h"
+#include "lista.h"
 #include <string.h>
 
 /** @brief A főmenü opcióit tartalmazó lista.*/
@@ -272,3 +273,13 @@ char contextmenu(contact *c){
     while ((getchar()) != '\n');
     return choice;
 }
+
+void printerror(char *str){
+    printf("\e[1;31m***********************\n%s\n***********************\e[0m\n", str);
+}
+
+/*
+ListaElem *search(){
+    
+}
+*/

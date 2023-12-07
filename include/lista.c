@@ -102,6 +102,7 @@ char* sor_olvas() {
     char *buffer = malloc(sizeof(char) * bufsize);
     int c;
     if (!buffer) {
+        printerror("sor_olvas: memóriafoglalási hiba");
         fprintf(stderr, "sor_olvas: memóriafoglalási hiba\n");
         exit(EXIT_FAILURE);
     }
@@ -118,6 +119,7 @@ char* sor_olvas() {
             bufsize += 32;
             buffer = realloc(buffer, bufsize);
             if (!buffer) {
+                printerror("sor_olvas: memóriafoglalási hiba");
                 fprintf(stderr, "sor_olvas: memóriafoglalási hiba\n");
                 exit(EXIT_FAILURE);
             }
@@ -147,7 +149,7 @@ ListaElem *import_all(ListaElem *eleje) {
 
     d = opendir("cards");
     if(d == NULL) {
-        printf("nem lehet megnyitni a mappát.\n");
+        printerror("nem lehet megnyitni a mappát.");
         return eleje;
     }
     if (d) {
@@ -176,6 +178,6 @@ ListaElem *nth(ListaElem *eleje, size_t n){
     for(ListaElem *iter = eleje; iter != NULL; iter = iter->next){
         if(n-1 == i++) return iter;
     }
-    printf("túlindexelted a listát!\n");
+    printerror("TÚLINDEXELTED A LISTÁT!");
     return NULL;
 }

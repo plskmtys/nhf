@@ -33,4 +33,8 @@ void clear();
 
 contact *edit_contact(contact *c, char *next);
 
+char contextmenu(contact *c);
+
+void printerror(char *str);
+
 #endif //NHF_MENU_H
