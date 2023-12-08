@@ -55,7 +55,13 @@ contact InitContact(contact empty){
  * @param n A kontakt neve
 */
 char *straddr(address *a){
-    char *ret = (char*) malloc(sizeof(*a)+5*sizeof(char));
+    size_t newsize = strlen(a->zip) + strlen(a->city) + strlen(a->street_no) + strlen(a->county) + strlen(a->country) + 5;
+    char *ret = (char*) malloc(newsize);
+    if(ret == NULL) {
+        printerror("memóriafoglalási hiba");
+        return NULL;
+    }
+    ret[0] = '\0'; // initialize the string
     char *attr[] = {
             a->zip,
             a->city,

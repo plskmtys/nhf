@@ -13,6 +13,14 @@ typedef struct ListaElem{
     struct ListaElem *next;
 }ListaElem;
 
+/** @brief Láncolt lista egy elemére mutató, és egymás után láncolható struktúra. Keresésre, indexelésre használható. */
+typedef struct ListaElemIndex{
+    /** @brief Egy láncoltlista-elemre mutató pointer*/
+    ListaElem *elemptr;
+    /** @brief Következő listaelem-index típusú elemre mutató pointer*/
+    struct ListaElemIndex *next;
+}ListaElemIndex;
+
 void reset(char *next);
 
 int listahossz(ListaElem *eleje);
@@ -25,14 +33,18 @@ ListaElem *GetLastItem(ListaElem *eleje);
 
 ListaElem *vegere_beszur(ListaElem *elso, contact uj);
 
-ListaElem *keres(ListaElem *eleje, char *keresett);
+ListaElemIndex *keres(ListaElem *eleje, char *keresett);
 
 char *sor_olvas();
 
 void lista_kiir_short(ListaElem *eleje);
 
+void lista_kiir_indirekt(ListaElemIndex *eleje);
+
 ListaElem *import_all(ListaElem *eleje);
 
 ListaElem *nth(ListaElem *eleje, size_t n);
+
+ListaElemIndex *nth_i(ListaElemIndex *eleje, size_t n);
 
 #endif //NHF_LISTA_H

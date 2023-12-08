@@ -62,7 +62,7 @@ const char *address_options[] = {
 };
 
 void reset(char *next){
-    *next = '0';
+    if(*next != 'x') *next = '0';
 }
 
 /** @brief Egy egyszerűbb, buffer overflow mentes scanf, csakis stringekhez.

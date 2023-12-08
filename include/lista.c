@@ -29,6 +29,8 @@ void lista_free(ListaElem *eleje) {
     }
 }
 
+
+
 /** @brief Láncolt lista elejére szúr be adatot, laborhoz használt függvény átalakított verziója.
  * @param eleje A lista eleje.
  * @param adat A beszúrandó adat.
@@ -77,7 +79,7 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact mit) {
  * @param keresett A keresett kifejezés (string).
  * @returns Láncolt lista a keresési eredményekkel.
 */
-ListaElem *keres(ListaElem *eleje, char *needle){
+ListaElem *keres0(ListaElem *eleje, char *needle){
     ListaElem *iter;
     ListaElem *ret = NULL;
     char *datastr;
@@ -89,6 +91,32 @@ ListaElem *keres(ListaElem *eleje, char *needle){
         free(datastr);
     }
     return ret;
+}
+
+ListaElemIndex *keres(ListaElem *eleje, char *needle){
+    ListaElem *iter;
+    ListaElemIndex *ujeleje = NULL;
+    ListaElemIndex *vege = NULL;
+    char *datastr;
+    for (iter = eleje; iter != NULL; iter=iter->next) {
+        datastr = (char *) malloc(sizeof(*iter));
+        sprintf(datastr, "%s %s %s %s %s %s%c", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
+                iter->adat.email, iter->adat.org, iter->adat.title, '\0');
+        if (strstr(datastr, needle) != NULL) {
+            ListaElemIndex *ujElem = (ListaElemIndex*) malloc(sizeof(ListaElemIndex));
+            ujElem->elemptr = iter;
+            ujElem->next = NULL;
+            if(ujeleje == NULL){
+                ujeleje = ujElem;
+                vege = ujElem;
+            } else {
+                vege->next = ujElem;
+                vege = ujElem;            
+            }
+        }
+        free(datastr);
+    }
+    return ujeleje;
 }
 
 /** @brief Dinamikus memórával egy hosszú sort beolvasó függvény. A program végül nem használja, a sok realloc helyett hatékonyabb 
@@ -138,6 +166,14 @@ void lista_kiir_short(ListaElem *eleje){
     }
 }
 
+void lista_kiir_indirekt(ListaElemIndex *eleje){
+    ListaElemIndex *iter;
+    int i = 1;
+    for(iter = eleje; iter != NULL; iter = iter->next, i++) {
+        printf("(%d) %s %s, %s\n", i, iter->elemptr->adat.phone, iter->elemptr->adat.fn, straddr(&(iter->elemptr->adat.address)));
+    }
+}
+
 /** @brief Az összes kártyát importálja a /cards mappából.
  * @param eleje A lista eleje, amibe beilleszti az elemeket.
 */
@@ -176,6 +212,15 @@ ListaElem *import_all(ListaElem *eleje) {
 ListaElem *nth(ListaElem *eleje, size_t n){
     size_t i = 0;
     for(ListaElem *iter = eleje; iter != NULL; iter = iter->next){
+        if(n-1 == i++) return iter;
+    }
+    printerror("TÚLINDEXELTED A LISTÁT!");
+    return NULL;
+}
+
+ListaElemIndex *nth_i(ListaElemIndex *eleje, size_t n) {
+    size_t i = 0;
+    for(ListaElemIndex *iter = eleje; iter != NULL; iter = iter->next){
         if(n-1 == i++) return iter;
     }
     printerror("TÚLINDEXELTED A LISTÁT!");

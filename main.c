@@ -28,74 +28,77 @@ int main(){
             case '1': {
                 contact uj;
                 uj = InitContact(uj);
-                while (next != 'b' && next != 'x') {
+                while (next != 'x' && next != 'b') {
                     edit_contact(&uj, &next);
                 }
                 elso = vegere_beszur(elso, uj);
                 reset(&next);
                 break;
             }
-            //view all
+
+            //összes megtekintése
             case '2': {
-                clear();
-                lista_kiir_short(elso);
-                /*
-                next = getchar();
-                
-                clear();
+                while (next != 'x' && next != 'b') {
+                    clear();
+                    printf("Összes kontakt:\n\n");
                     lista_kiir_short(elso);
                     printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                    char n = 0;
-                    scanf(" %c", &n);
+                    scanf(" %c", &next);
                     clear();
-                    while(nth(elso, n-0x30) == NULL) {
+                    while(next != 'x' && next != 'b' && nth(elso, next-0x30) == NULL) {
+                        printf("Összes kontakt:\n\n");
                         lista_kiir_short(elso);
                         printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                        scanf(" %c", &n);
+                        scanf(" %c", &next);
                         clear();
                     }
-                    edit_contact(&nth(elso, n-0x30)->adat, &next);
-
-                */
-                while ((getchar()) != '\n');
+                    while(next != 'x' && next != 'b'){
+                        edit_contact(&nth(elso, next-0x30)->adat, &next);
+                    }
+                    reset(&next);
+                }
+                reset(&next);
                 clear();
                 break;
             }
-            //search
+            //keresés
             case '3': {
                 char needle[256];
                 clear();
                 beker_keres("keresett kifejezés", needle, sizeof(needle));
 
-                ListaElem *results_eleje = NULL;
+                //elemek megkeresése
+                ListaElemIndex *results_eleje = NULL;
                 results_eleje = keres(elso, needle);
                 if(results_eleje == NULL){
                     printf("\nNincs találat.\nKilépés...\n");
-                    lista_free(results_eleje);
                     reset(&next);
                     sleep(1);
                     clear();
                     break;
                 }
-                while (next != 'b' && next != 'x') {
-                    char n = 0;
+
+                //eredmények kiírása
+                while (next != 'x' && next != 'b') {
                     clear();
                     printf("Keresési eredmények a követezőre: %s\n\n", needle);
-                    lista_kiir_short(results_eleje);
+                    lista_kiir_indirekt(results_eleje);
                     printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                    scanf(" %c", &n);
+                    scanf(" %c", &next);
                     clear();
-                    while(nth(results_eleje, n-0x30) == NULL) {
+                    while(next != 'x' && next != 'b' && nth_i(results_eleje, next-0x30) == NULL) {
                         printf("Keresési eredmények a követezőre: %s\n\n", needle);
-                        lista_kiir_short(results_eleje);
+                        lista_kiir_indirekt(results_eleje);
                         printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                        scanf(" %c", &n);
+                        scanf(" %c", &next);
                         clear();
                     }
-                    edit_contact(&nth(results_eleje, n-0x30)->adat, &next);
+                    while(next != 'x' && next != 'b'){
+                        edit_contact(&nth_i(results_eleje, next-0x30)->elemptr->adat, &next);
+                    }
+                    reset(&next);
                 }
                 reset(&next);
-                lista_free(results_eleje); //problémás
                 clear();
                 break;
             }

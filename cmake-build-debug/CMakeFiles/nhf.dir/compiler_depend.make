@@ -87,6 +87,7 @@ CMakeFiles/nhf.dir/include/lista.c.o: /home/matyas/sata/code/prog1/nhf/nhf/inclu
 
 CMakeFiles/nhf.dir/include/menu.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/menu.c \
   /home/matyas/sata/code/prog1/nhf/nhf/include/debugmalloc.h \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/lista.h \
   /home/matyas/sata/code/prog1/nhf/nhf/include/menu.h \
   /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.h \
   /usr/include/alloca.h \
@@ -166,20 +167,27 @@ CMakeFiles/nhf.dir/include/menu.c.o: /home/matyas/sata/code/prog1/nhf/nhf/includ
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h
 
 CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.c \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/debugmalloc.h \
+  /home/matyas/sata/code/prog1/nhf/nhf/include/menu.h \
   /home/matyas/sata/code/prog1/nhf/nhf/include/vcard.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
+  /usr/include/bits/confname.h \
   /usr/include/bits/dirent.h \
   /usr/include/bits/dirent_ext.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/environments.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/getopt_core.h \
+  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/local_lim.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthread_stack_min.h \
   /usr/include/bits/pthreadtypes-arch.h \
@@ -213,9 +221,11 @@ CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/inclu
   /usr/include/bits/types/timer_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/ctype.h \
   /usr/include/dirent.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -231,7 +241,9 @@ CMakeFiles/nhf.dir/include/vcard.c.o: /home/matyas/sata/code/prog1/nhf/nhf/inclu
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
+  /usr/include/unistd.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-redhat-linux/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h
 
 CMakeFiles/nhf.dir/main.c.o: /home/matyas/sata/code/prog1/nhf/nhf/main.c \
