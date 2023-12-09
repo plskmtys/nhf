@@ -32,7 +32,7 @@ int main(){
                 while (next != 'x' && next != 'b') {
                     edit_contact(&uj, &next);
                 }
-                elso = vegere_beszur(elso, uj);
+                elso = beszur(elso, uj);
                 reset(&next);
                 break;
             }

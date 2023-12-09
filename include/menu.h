@@ -3,7 +3,7 @@
 #include "vcard.h"
 #include "debugmalloc.h"
 #ifndef NHF_MENU_H
-#define NHF_MENU_H
+#define NHF_MENU_H //NHF_MENU_H
 
 extern const char *main_options[];
 

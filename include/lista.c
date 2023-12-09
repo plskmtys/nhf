@@ -62,11 +62,11 @@ ListaElem *GetLastItem(ListaElem *eleje){
     return eleje;
 }
 
-/** @brief Láncolt lista végére szúr be adatot, laborhoz használt függvény átalakított verziója.
+/** @brief Láncolt listába rendezetten szúr be adatot, a telefonszámok szerint rendezve.
  * @param eleje A lista eleje.
  * @param mit A beszúrandó adat.
 */
-ListaElem *vegere_beszur(ListaElem *eleje, contact mit) {
+ListaElem *beszur(ListaElem *eleje, contact mit) {
     ListaElem *uj = (ListaElem *) malloc(sizeof(ListaElem));
     uj->adat = mit; /* Adat bemásolása */
     if (eleje == NULL) {
@@ -106,20 +106,6 @@ ListaElem *vegere_beszur(ListaElem *eleje, contact mit) {
  * @param keresett A keresett kifejezés (string).
  * @returns Láncolt lista a keresési eredményekkel.
 */
-ListaElem *keres0(ListaElem *eleje, char *needle){
-    ListaElem *iter;
-    ListaElem *ret = NULL;
-    char *datastr;
-    for (iter = eleje; iter != NULL; iter=iter->next) {
-        datastr = (char *) malloc(sizeof(*iter) + sizeof(char) * 60);
-        sprintf(datastr, "%s %s %s %s %s %s%c", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
-                iter->adat.email, iter->adat.org, iter->adat.title, '\0');
-        if (strstr(datastr, needle) != NULL) ret = vegere_beszur(ret, iter->adat);
-        free(datastr);
-    }
-    return ret;
-}
-
 ListaElemIndex *keres(ListaElem *eleje, char *needle){
     ListaElem *iter;
     ListaElemIndex *ujeleje = NULL;
@@ -227,7 +213,7 @@ ListaElem *import_all(ListaElem *eleje) {
                 contact c;
                 InitContact(c);
                 readcard(dir->d_name, &c);
-                eleje = vegere_beszur(eleje, c);
+                eleje = beszur(eleje, c);
             }
         }
         closedir(d);

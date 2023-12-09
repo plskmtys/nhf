@@ -1,10 +1,12 @@
 BEGIN:VCARD
 VERSION:4.0
 FN:Mr. Körte Alma
-N:Alma;Körte;;Mr.;
+N:Alma;Körte;;;
 TEL:+44103347623
-ADR;TYPE=home:;;1 Big Apple street;New York City;NY;;USA
+ADR;TYPE=home:;;1 Big Apple street;New York City;NY;;
 BDAY:
 EMAIL:almakorte@citromail.hu
+ORG:bolt
+TITLE:gyümölcs
 NOTE:piros
 END:VCARD

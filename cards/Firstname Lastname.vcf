@@ -2,9 +2,11 @@ BEGIN:VCARD
 VERSION:4.0
 FN:Firstname Lastname
 N:Lastname;Firstname;Middlename,Middlename2,MiddlenameN;Dr.;PhD.
-TEL:00017738996071
+TEL:+1 (420) 707 6969
 ADR;TYPE=home:;;00 Street;City;;;
 BDAY:YYYYMMDD
 EMAIL:user@domain.hu
+ORG:Company
+TITLE:Employee
 NOTE:this is where notes go
 END:VCARD

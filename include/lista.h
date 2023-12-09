@@ -29,11 +29,9 @@ void lista_free(ListaElem *eleje);
 
 void lista_free_i(ListaElemIndex *eleje);
 
-ListaElem *elore_beszur(ListaElem *eleje, contact adat);
+ListaElem *beszur(ListaElem *eleje, contact mit);
 
 ListaElem *GetLastItem(ListaElem *eleje);
-
-ListaElem *vegere_beszur(ListaElem *elso, contact uj);
 
 ListaElemIndex *keres(ListaElem *eleje, char *keresett);
 

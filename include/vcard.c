@@ -124,6 +124,8 @@ int writecard(char *filename, contact *out){
     fprintf(fp, "ADR;TYPE=home:;;%s;%s;%s;%s;%s\n", out->address.street_no, out->address.city, out->address.county, out->address.zip, out->address.country);
     fprintf(fp, "BDAY:%s\n",out->bday);
     fprintf(fp, "EMAIL:%s\n", out->email);
+    fprintf(fp, "ORG:%s\n", out->org);
+    fprintf(fp, "TITLE:%s\n", out->title);
     fprintf(fp, "NOTE:%s\n", out->note);
     fprintf(fp, "END:VCARD");
     return 0;
