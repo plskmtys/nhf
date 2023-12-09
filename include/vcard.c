@@ -56,7 +56,7 @@ contact InitContact(contact empty){
 */
 char *straddr(address *a){
     size_t newsize = strlen(a->zip) + strlen(a->city) + strlen(a->street_no) + strlen(a->county) + strlen(a->country) + 5;
-    char *ret = (char*) malloc(newsize);
+    char *ret = (char*) malloc(newsize*sizeof(char));
     if(ret == NULL) {
         printerror("memóriafoglalási hiba");
         return NULL;

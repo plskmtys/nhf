@@ -27,6 +27,8 @@ int listahossz(ListaElem *eleje);
 
 void lista_free(ListaElem *eleje);
 
+void lista_free_i(ListaElemIndex *eleje);
+
 ListaElem *elore_beszur(ListaElem *eleje, contact adat);
 
 ListaElem *GetLastItem(ListaElem *eleje);

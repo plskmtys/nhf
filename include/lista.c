@@ -29,7 +29,14 @@ void lista_free(ListaElem *eleje) {
     }
 }
 
-
+void lista_free_i(ListaElemIndex *eleje) {
+    ListaElemIndex *p = eleje;
+    while (p != NULL) {
+        ListaElemIndex *tmp = p->next;
+        free(p);
+        p = tmp;
+    }
+}
 
 /** @brief Láncolt lista elejére szúr be adatot, laborhoz használt függvény átalakított verziója.
  * @param eleje A lista eleje.
@@ -100,8 +107,10 @@ ListaElemIndex *keres(ListaElem *eleje, char *needle){
     char *datastr;
     for (iter = eleje; iter != NULL; iter=iter->next) {
         datastr = (char *) malloc(sizeof(*iter));
-        sprintf(datastr, "%s %s %s %s %s %s%c", iter->adat.fn, iter->adat.phone, straddr(&iter->adat.address),
+        char *adr = straddr(&iter->adat.address);
+        sprintf(datastr, "%s %s %s %s %s %s%c", iter->adat.fn, iter->adat.phone, adr,
                 iter->adat.email, iter->adat.org, iter->adat.title, '\0');
+        free(adr);
         if (strstr(datastr, needle) != NULL) {
             ListaElemIndex *ujElem = (ListaElemIndex*) malloc(sizeof(ListaElemIndex));
             ujElem->elemptr = iter;
@@ -170,7 +179,9 @@ void lista_kiir_indirekt(ListaElemIndex *eleje){
     ListaElemIndex *iter;
     int i = 1;
     for(iter = eleje; iter != NULL; iter = iter->next, i++) {
-        printf("(%d) %s %s, %s\n", i, iter->elemptr->adat.phone, iter->elemptr->adat.fn, straddr(&(iter->elemptr->adat.address)));
+        char *adr = straddr(&iter->elemptr->adat.address);
+        printf("(%d) %s %s, %s\n", i, iter->elemptr->adat.phone, iter->elemptr->adat.fn, adr);
+        free(adr);
     }
 }
 

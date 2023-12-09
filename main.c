@@ -43,20 +43,30 @@ int main(){
                     printf("Összes kontakt:\n\n");
                     lista_kiir_short(elso);
                     printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                    scanf(" %c", &next);
+                    char n = next;
+                    scanf(" %c", &n);
                     clear();
-                    while(next != 'x' && next != 'b' && nth(elso, next-0x30) == NULL) {
+
+                    //hibakezelés: ha invalid listaindexet ad meg a felhasználó
+                    while(n != 'x' && n != 'b' && nth(elso, n-0x30) == NULL) {
                         printf("Összes kontakt:\n\n");
                         lista_kiir_short(elso);
                         printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                        scanf(" %c", &next);
+                        scanf(" %c", &n);
                         clear();
                     }
-                    while(next != 'x' && next != 'b'){
-                        edit_contact(&nth(elso, next-0x30)->adat, &next);
+
+                    //a kiválasztott elem szerkesztése, ha nem lép ki a felhasználó és megad egy létező indexet
+                    while(n != 'x' && n != 'b'){
+                        edit_contact(&(nth(elso, n-0x30))->adat, &next); //
+                        if(next == 'x' || next == 'b') n = next;
                     }
-                    reset(&next);
+                    /* a szerkesztés után sajnos egyből ki kell lépni a főmenübe. oka: lehetséges eset, hogy 120 darab kontakt van.
+                     * és mivel a kilépésre használt betű 'x' ascii kódja a 120, a felhasználó sosem tudna kilépni, mert mindig a 120-as sorszámú
+                     * elemet "választaná ki".
+                     * */
                 }
+
                 reset(&next);
                 clear();
                 break;
@@ -80,26 +90,35 @@ int main(){
 
                 //eredmények kiírása
                 while (next != 'x' && next != 'b') {
+
                     clear();
                     printf("Keresési eredmények a követezőre: %s\n\n", needle);
                     lista_kiir_indirekt(results_eleje);
                     printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                    scanf(" %c", &next);
+                    char n = next;
+                    scanf(" %c", &n);
                     clear();
-                    while(next != 'x' && next != 'b' && nth_i(results_eleje, next-0x30) == NULL) {
+
+                    //hibakezelés: ha invalid listaindexet ad meg a felhasználó
+                    while(n != 'x' && n != 'b' && nth_i(results_eleje, n-0x30) == NULL) {
                         printf("Keresési eredmények a követezőre: %s\n\n", needle);
                         lista_kiir_indirekt(results_eleje);
                         printf("\nMelyiket szeretné megtekinteni/szerkeszteni?\n");
-                        scanf(" %c", &next);
+                        scanf(" %c", &n);
                         clear();
                     }
-                    while(next != 'x' && next != 'b'){
-                        edit_contact(&nth_i(results_eleje, next-0x30)->elemptr->adat, &next);
+
+                    //a kiválasztott elem szerkesztése, ha nem lép ki a felhasználó és megad egy létező indexet
+                    while(n != 'x' && n != 'b'){
+                        edit_contact(&(nth_i(results_eleje, n-0x30))->elemptr->adat, &next); //
+                        if(next == 'x' || next == 'b') n = next;
                     }
-                    reset(&next);
+                    /* a szerkesztés után sajnos itt is egyből ki kell lépni a főmenübe.*/
                 }
+
                 reset(&next);
                 clear();
+                lista_free_i(results_eleje);
                 break;
             }
             //export
