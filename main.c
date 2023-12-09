@@ -17,6 +17,7 @@ int main(){
     #endif
     printf("\n----TELEFONKÖNYV----\nvezérlés:\n-az adott menübe lépéshez adja meg a sorszámát. ha kész, ENTER.\n-kilépés: 'x'\n-visszalépés: 'b'\n");
 
+    //az összes mentett adat beolvasása a listába
     ListaElem *elso = NULL;
     elso = import_all(elso);
     char next = '0';
@@ -115,7 +116,6 @@ int main(){
                     }
                     /* a szerkesztés után sajnos itt is egyből ki kell lépni a főmenübe.*/
                 }
-
                 reset(&next);
                 clear();
                 lista_free_i(results_eleje);
@@ -124,13 +124,7 @@ int main(){
             //export
             case '4': {
                 clear();
-                for(ListaElem *iter = elso; iter != NULL; iter = iter->next){
-                    if(writecard(iter->adat.fn, &iter->adat)){
-                        printf("sikertelen export: %s\n", iter->adat.fn);
-                    } else {
-                        printf("sikeres export: %s\n", iter->adat.fn);
-                    }
-                }
+                export_all(elso);
                 break;
             }
             //import
@@ -145,6 +139,11 @@ int main(){
         }
         clear();
     }
+
+    printf("\nKileptel.\n");
+    //kilépéskor az összes mentése
+    export_all(elso);
+    printf("Adatok mentese kesz.\n");
     if(elso != NULL){
         lista_free(elso);
     }

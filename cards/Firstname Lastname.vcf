@@ -3,10 +3,8 @@ VERSION:4.0
 FN:Firstname Lastname
 N:Lastname;Firstname;Middlename,Middlename2,MiddlenameN;Dr.;PhD.
 TEL:00017738996071
-ADR;TYPE=home:;;47 Irinyi József u.;Budapest;Pest;1117;Hungary
+ADR;TYPE=home:;;00 Street;City;;;
 BDAY:YYYYMMDD
 EMAIL:user@domain.hu
-ORG:organisation
-TITLE:job title
 NOTE:this is where notes go
 END:VCARD

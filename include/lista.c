@@ -67,18 +67,38 @@ ListaElem *GetLastItem(ListaElem *eleje){
  * @param mit A beszúrandó adat.
 */
 ListaElem *vegere_beszur(ListaElem *eleje, contact mit) {
-    ListaElem *uj = (ListaElem *) malloc(sizeof(ListaElem)); /* Új elem */
- 
+    ListaElem *uj = (ListaElem *) malloc(sizeof(ListaElem));
     uj->adat = mit; /* Adat bemásolása */
-    uj->next = NULL; /* Ez lesz a lista vége, ezért NULL a következő elem */
     if (eleje == NULL) {
+        uj->next = NULL;
         return uj; /* Ha üres a lista, akkor ez lesz az eleje */
-    } else {
-        ListaElem *p = eleje; /* Elmegyünk az utolsó elemig (aminek a pointere NULL pointer) */
-        while (p->next != NULL) p = p->next;
-        p->next = uj; /* És hozzáfűzzük */
+    }
+    ListaElem *mozgo = eleje;
+    ListaElem *lemarado = NULL;
+    while (mozgo != NULL && strcmp(mit.phone, mozgo->adat.phone) >= 0){
+        if(strcmp(mit.phone, mozgo->adat.phone) == 0){
+            mozgo->adat = mit;
+            free(uj);
+            return eleje;
+        }
+        lemarado = mozgo;
+        mozgo = mozgo->next;
+    }
+    if(lemarado == NULL){
+        uj->next = mozgo;
+        return uj;
+    }
+    if(mozgo == NULL){
+        lemarado->next = uj;
+        uj->next = NULL;
         return eleje;
     }
+    
+    lemarado->next = uj;
+    uj->next = mozgo;
+
+    return eleje;
+    
 }
 
 /** @brief Megkeres egy kifejezést az adatbázisban, és visszaad egy listát az összes olyan kontakttal, ami tartalmazza a keresett kifejezést valamilyen mezőben.
@@ -213,6 +233,12 @@ ListaElem *import_all(ListaElem *eleje) {
         closedir(d);
     }
     return eleje;
+}
+
+void export_all(ListaElem *eleje){
+    for(ListaElem *iter = eleje; iter != NULL; iter = iter->next){
+        writecard(iter->adat.fn, &iter->adat);
+    }
 }
 
 /** @brief Egy láncolt lista n-edik elemét keresi meg és adja vissza. Túlindexeléskor figyelmeztet és NULL pointert ad vissza.

@@ -1,9 +1,10 @@
 BEGIN:VCARD
 VERSION:4.0
 FN:Egy Kettő
-N:Egy;Kettő;;;
+N:Kettő;Egy;;;
 TEL:+36301234567
-ADR;TYPE=home:;;1 Egy u.;Budapest;Pest;1111;Hungary
+ADR;TYPE=home:;;one street;;;;
 BDAY:20010101
 EMAIL:1@sch.bme.hu
+NOTE:nem
 END:VCARD

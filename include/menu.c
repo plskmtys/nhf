@@ -195,7 +195,9 @@ contact* edit_contact(contact *c, char *next){
                         break;
                 }
             }
-            strcpy((c)->fn, strfn(&(c)->name));
+            char *fn = strfn(&(c)->name);
+            strcpy((c)->fn, fn);
+            free(fn);
             *next = '0';
             break; //endcase nev
         }

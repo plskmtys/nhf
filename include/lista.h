@@ -45,6 +45,8 @@ void lista_kiir_indirekt(ListaElemIndex *eleje);
 
 ListaElem *import_all(ListaElem *eleje);
 
+void export_all(ListaElem *eleje);
+
 ListaElem *nth(ListaElem *eleje, size_t n);
 
 ListaElemIndex *nth_i(ListaElemIndex *eleje, size_t n);
